@@ -4,8 +4,6 @@ import { BlogsPage } from "src/components";
 
 import { QiitaList, fetchQiitaList } from "src/api";
 
-export const config = { amp: true };
-
 type Props = { blogs: QiitaList };
 
 const Blogs: NextPage<Props> = ({ blogs }) => {

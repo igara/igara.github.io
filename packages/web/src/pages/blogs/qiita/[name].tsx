@@ -3,8 +3,6 @@ import { NextPage } from "next";
 import { BlogQiitaPage } from "src/components";
 import { fetchQiitaDetail, fetchQiitaList } from "src/api";
 
-export const config = { amp: true };
-
 const BlogQiita: NextPage<{ blog: string; name: string }> = ({
   blog,
   name,
