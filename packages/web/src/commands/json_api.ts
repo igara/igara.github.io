@@ -167,10 +167,7 @@ const createOGP = async ({
 
     const ogp = Buffer.from(b64string, "base64");
 
-    writeFileSync(
-      encodeURI(`public/ogp/${width}x${height}${path}/${title}.png`),
-      ogp
-    );
+    writeFileSync(`public/ogp/${width}x${height}${path}/${title}.png`, ogp);
   } catch (e) {
     console.log(e);
   }
@@ -225,8 +222,8 @@ const createQiitaOGP = async (browser: puppeteer.Browser, ogpHTML: string) => {
         body: detail,
         link: `/blogs/qiita/${title}`,
         ogp: {
-          large: encodeURI(`/ogp/1200x630/blogs/qiita/${title}.png`),
-          small: encodeURI(`/ogp/630x630/blogs/qiita/${title}.png`),
+          large: `/ogp/1200x630/blogs/qiita/${title}.png`,
+          small: `/ogp/630x630/blogs/qiita/${title}.png`,
         },
       };
     })
@@ -284,8 +281,8 @@ const createHatenaOGP = async (browser: puppeteer.Browser, ogpHTML: string) => {
         body: detail,
         link: `/blogs/hatena/${title}`,
         ogp: {
-          large: encodeURI(`/ogp/1200x630/blogs/hatena/${title}.png`),
-          small: encodeURI(`/ogp/630x630/blogs/hatena/${title}.png`),
+          large: `/ogp/1200x630/blogs/hatena/${title}.png`,
+          small: `/ogp/630x630/blogs/hatena/${title}.png`,
         },
       };
     })
@@ -349,8 +346,8 @@ const createZennOGP = async (browser: puppeteer.Browser, ogpHTML: string) => {
         body,
         link: `/blogs/zenn/${title}`,
         ogp: {
-          large: encodeURI(`/ogp/1200x630/blogs/zenn/${title}.png`),
-          small: encodeURI(`/ogp/630x630/blogs/zenn/${title}.png`),
+          large: `/ogp/1200x630/blogs/zenn/${title}.png`,
+          small: `/ogp/630x630/blogs/zenn/${title}.png`,
         },
       };
     })
