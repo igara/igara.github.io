@@ -5,11 +5,12 @@
     "dev": "next dev",
     "start": "next start",
     "build": "next build",
-    "export": "next build && next export",
+    "export": "cross-env NODE_ENV=\"production\" next build && cross-env NODE_ENV=\"production\" next export",
     "lint": "next lint",
     "json:api": "node --require esbuild-register ./src/commands/json_api.ts"
   },
   "dependencies": {
+    "cross-env": "7.0.3",
     "dayjs": "1.11.4",
     "dom-parser": "0.1.6",
     "esbuild": "0.15.1",

@@ -23,8 +23,14 @@ const BlogHatena: NextPage<{
           content={`${title} / Hatena バックアップ / syonet`}
         />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={ogp.large} />
-        <meta property="og:image" content={ogp.small} />
+        <meta
+          property="og:image"
+          content={`${process.env.NEXT_PUBLIC_WEB_HOST}${ogp.large}`}
+        />
+        <meta
+          property="og:image"
+          content={`${process.env.NEXT_PUBLIC_WEB_HOST}${ogp.small}`}
+        />
         <meta property="og:description" content={description} />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" href="/favicon.ico" />
