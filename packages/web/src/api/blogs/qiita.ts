@@ -1,5 +1,13 @@
 import useSWR from "swr";
-import { useSWRByURL, fetcher } from "src/api";
+import {
+  useSWRJSONByURL,
+  fetcherJSON,
+  useSWRTextByURL,
+  fetcherText,
+} from "src/api";
+
+const qiitaListURL =
+  "https://api.github.com/repos/igara/qiita-export/contents/data/igara";
 
 export type QiitaList = {
   name: string;
@@ -18,17 +26,17 @@ export type QiitaList = {
   };
 }[];
 
-export const fetchQiitaList = () => {
-  const result = fetcher<QiitaList>({
-    url: "https://api.github.com/repos/igara/qiita-export/contents/data/igara",
+export const fetchQiitaList = async () => {
+  const result = await fetcherJSON<QiitaList>({
+    url: qiitaListURL,
   });
 
   return result;
 };
 
 export const useSWRQiitaListFetch = () => {
-  const swr = useSWRByURL<QiitaList, any>({
-    url: "https://api.github.com/repos/igara/qiita-export/contents/data/igara",
+  const swr = useSWRJSONByURL<QiitaList, any>({
+    url: qiitaListURL,
   });
 
   return swr;
@@ -49,7 +57,7 @@ export const getQiitaDetailURL = (name: string) => {
 };
 
 export const fetchQiitaDetail = (name: string) => {
-  const result = fetcher<string>({
+  const result = fetcherText({
     url: getQiitaDetailURL(name),
     type: "text",
   });
@@ -58,7 +66,7 @@ export const fetchQiitaDetail = (name: string) => {
 };
 
 export const useSWRQiitaDetailFetch = (name: string) => {
-  const swr = useSWRByURL<string, any>({
+  const swr = useSWRTextByURL<any>({
     url: getQiitaDetailURL(name),
     type: "text",
   });

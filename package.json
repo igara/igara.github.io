@@ -1,7 +1,7 @@
 {
   "name": "igara.github.io",
   "engines": {
-    "node": ">=16.16.0",
+    "node": ">=18.7.0",
     "npm": "use pnpm",
     "pnpm": ">=7",
     "yarn": "use pnpm"

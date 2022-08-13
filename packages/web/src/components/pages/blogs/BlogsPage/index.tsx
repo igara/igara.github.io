@@ -1,8 +1,17 @@
 import { NextPage } from "next";
-import { QiitaList } from "src/api";
+import Link from "next/link";
+import { AllJSON } from "src/api";
 
-type Props = { blogs: QiitaList };
+type Props = { blogs: AllJSON };
 
 export const BlogsPage: NextPage<Props> = ({ blogs }) => {
-  return <div>ddd</div>;
+  return (
+    <div>
+      {blogs.map((blog) => (
+        <Link key={blog.link} href={blog.link}>
+          {blog.title}
+        </Link>
+      ))}
+    </div>
+  );
 };

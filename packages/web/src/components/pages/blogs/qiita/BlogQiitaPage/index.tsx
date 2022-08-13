@@ -1,12 +1,12 @@
 import { NextPage } from "next";
 
-type Props = { blog: string; name: string };
+type Props = { title: string; body: string };
 
-export const BlogQiitaPage: NextPage<Props> = ({ blog, name }) => {
+export const BlogQiitaPage: NextPage<Props> = ({ title, body }) => {
   return (
     <div>
-      <h1>{name}</h1>
-      <div dangerouslySetInnerHTML={{ __html: blog }} />
+      <h1>{title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: body }} />
     </div>
   );
 };

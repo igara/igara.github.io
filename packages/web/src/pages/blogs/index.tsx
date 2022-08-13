@@ -2,16 +2,16 @@ import { NextPage } from "next";
 
 import { BlogsPage } from "src/components";
 
-import { QiitaList, fetchQiitaList } from "src/api";
+import { AllJSON, allJSON } from "src/api";
 
-type Props = { blogs: QiitaList };
+type Props = { blogs: AllJSON };
 
 const Blogs: NextPage<Props> = ({ blogs }) => {
   return <BlogsPage blogs={blogs} />;
 };
 
-export const getStaticProps = async () => {
-  const blogs = await fetchQiitaList();
+export const getStaticProps = () => {
+  const blogs = allJSON;
 
   return {
     props: { blogs },

@@ -6,14 +6,20 @@
     "start": "next start",
     "build": "next build",
     "export": "next build && next export",
-    "lint": "next lint"
+    "lint": "next lint",
+    "json:api": "node --require esbuild-register ./src/commands/json_api.ts"
   },
   "dependencies": {
+    "dayjs": "1.11.4",
+    "dom-parser": "0.1.6",
+    "esbuild": "0.15.1",
+    "esbuild-register": "3.3.3",
     "next": "12.2.4",
+    "puppeteer": "16.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-is": "18.2.0",
-    "swr": "^1.3.0"
+    "swr": "1.3.0"
   },
   "devDependencies": {
     "@igara.github.io/storybook": "../storybook",

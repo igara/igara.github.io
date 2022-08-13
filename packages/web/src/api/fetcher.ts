@@ -14,13 +14,12 @@ type FetchOption = {
   body?: RequestInit["body"];
 };
 
-export const fetcher = async <Data = any>({
+export const fetcherJSON = async <Data = any>({
   url = "",
-  type = "json",
   headers = {},
   method = "GET",
   bodyObject = {},
-}: FetcherOption): Promise<Data | string> => {
+}: FetcherOption): Promise<Data> => {
   try {
     let fetchOption: FetchOption = {
       headers,
@@ -39,11 +38,6 @@ export const fetcher = async <Data = any>({
       throw new Error(`server error: ${JSON.stringify(response)}`);
     }
 
-    if (type === "text") {
-      const text = await response.text();
-      return text;
-    }
-
     const json = await response.json();
     return json;
   } catch (error) {
@@ -52,6 +46,44 @@ export const fetcher = async <Data = any>({
   }
 };
 
-export function useSWRByURL<Data = any, Error = any>(option: FetcherOption) {
-  return useSWR<Data | string, Error>(option.url, () => fetcher(option));
+export const fetcherText = async ({
+  url = "",
+  headers = {},
+  method = "GET",
+  bodyObject = {},
+}: FetcherOption) => {
+  try {
+    let fetchOption: FetchOption = {
+      headers,
+      method,
+    };
+
+    if (method === "POST") {
+      fetchOption = {
+        ...fetchOption,
+        body: JSON.stringify(bodyObject),
+      };
+    }
+
+    const response = await fetch(url, fetchOption);
+    if (!response.ok) {
+      throw new Error(`server error: ${JSON.stringify(response)}`);
+    }
+
+    const text = await response.text();
+    return text;
+  } catch (error) {
+    console.error(error);
+    throw new Error(`${error}`);
+  }
+};
+
+export function useSWRJSONByURL<Data = any, Error = any>(
+  option: FetcherOption
+) {
+  return useSWR<Data, Error>(option.url, () => fetcherJSON(option));
+}
+
+export function useSWRTextByURL<Error = any>(option: FetcherOption) {
+  return useSWR<string, Error>(option.url, () => fetcherText(option));
 }
