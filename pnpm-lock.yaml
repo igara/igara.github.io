@@ -45,7 +45,7 @@ importers:
   packages/web:
     specifiers:
       '@igara.github.io/storybook': ../storybook
-      cross-env: ^7.0.3
+      cross-env: 7.0.3
       dayjs: 1.11.4
       dom-parser: 0.1.6
       esbuild: 0.15.1
