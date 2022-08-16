@@ -12,5 +12,6 @@
   "files.insertFinalNewline": true,
   "files.eol": "\n",
   "files.exclude": {},
-  "eslint.workingDirectories": [{ "mode": "auto" }]
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "cssVariables.lookupFiles": ["**/thema.module.css"]
 }
