@@ -1,0 +1,52 @@
+{
+  "name": "@igara.github.io/ui",
+  "main": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.esm.js",
+    "require": "./dist/index.cjs.js",
+    "node": "./dist/index.esm.js",
+    "default": "./dist/index.cjs.js"
+  },
+  "scripts": {
+    "build": "pnpm run rm:dist && pnpm run build:esbuild && pnpm run build:types",
+    "build:esbuild": "node build.js",
+    "build:types": "tsc --declaration --emitDeclarationOnly --declarationDir \"./dist\"",
+    "rm:dist": "node -e \"fs.rmSync(\\\"dist\\\", { recursive: true, force: true })\"",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@emotion/babel-preset-css-prop": "11.10.0",
+    "@emotion/react": "11.10.0",
+    "github-markdown-css": "5.1.0",
+    "next": "12.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.18.10",
+    "@emotion/babel-plugin": "11.10.0",
+    "@storybook/addon-actions": "6.5.10",
+    "@storybook/addon-essentials": "6.5.10",
+    "@storybook/addon-interactions": "6.5.10",
+    "@storybook/addon-links": "6.5.10",
+    "@storybook/builder-webpack5": "6.5.10",
+    "@storybook/jest": "0.0.10",
+    "@storybook/manager-webpack5": "6.5.10",
+    "@storybook/react": "6.5.10",
+    "@storybook/testing-library": "0.0.13",
+    "@types/react": "18.0.15",
+    "babel-loader": "8.2.5",
+    "esbuild": "0.15.1",
+    "esbuild-css-modules-plugin": "2.5.1",
+    "eslint": "8.21.0",
+    "eslint-config-next": "12.2.4",
+    "jest": "28.1.3",
+    "jest-specific-snapshot": "5.0.0",
+    "require-from-string": "2.0.2",
+    "storybook-css-modules": "1.0.8",
+    "typescript": "4.7.4",
+    "webpack": "5.74.0"
+  }
+}
