@@ -1,0 +1,24 @@
+.commonVariables {
+  --interval-0: 0;
+  --interval-4: 4px;
+  --interval-8: 8px;
+  --interval-12: 12px;
+  --interval-16: 16px;
+  --interval-24: 24px;
+  --interval-32: 32px;
+
+  --border-size: 2px;
+
+  --border-style-solid: solid;
+
+  --font-size-12: 12px;
+  --font-size-16: 16px;
+  --font-size-24: 24px;
+  --font-size-32: 32px;
+
+  --line-height-0: 0;
+  --line-height-16: 16px;
+  --line-height-24: 24px;
+  --line-height-32: 32px;
+  --line-height-48: 48px;
+}
