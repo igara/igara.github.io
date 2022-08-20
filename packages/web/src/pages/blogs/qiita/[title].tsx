@@ -17,9 +17,9 @@ const BlogQiita: NextPage<{
   return (
     <>
       <NextHead>
-        <title>{title} / Zenn バックアップ</title>
+        <title>{title} / Qiita バックアップ</title>
         <meta name="description" content={description} />
-        <meta property="og:title" content={`${title} / Zenn バックアップ`} />
+        <meta property="og:title" content={`${title} / Qiita バックアップ`} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="igara.github.io" />
         <meta
