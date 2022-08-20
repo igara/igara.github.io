@@ -8,7 +8,9 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "ui:build": "(cd packages/ui && pnpm run build)",
+    "web:start": "(cd packages/web && pnpm run start)"
   },
   "dependencies": {
     "@babel/core": "7.18.10",
