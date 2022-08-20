@@ -74,6 +74,7 @@ importers:
       '@emotion/react': 11.10.0
       '@igara.github.io/ui': ../ui
       cross-env: 7.0.3
+      crypto-js: 4.1.1
       dayjs: 1.11.4
       dom-parser: 0.1.6
       esbuild: 0.15.1
@@ -92,6 +93,7 @@ importers:
     dependencies:
       '@emotion/react': 11.10.0_byq7oc57qftat37gkdlgphtura
       cross-env: 7.0.3
+      crypto-js: 4.1.1
       dayjs: 1.11.4
       dom-parser: 0.1.6
       esbuild: 0.15.1
@@ -6132,6 +6134,10 @@ packages:
       randombytes: 2.1.0
       randomfill: 1.0.4
     dev: true
+
+  /crypto-js/4.1.1:
+    resolution: {integrity: sha512-o2JlM7ydqd3Qk9CA0L4NL6mTzU2sdx96a+oOfPu8Mkl/PK51vSyoi8/rQ8NknZtk44vq15lmhAj9CIAGwgeWKw==}
+    dev: false
 
   /css-loader/3.6.0_webpack@4.46.0:
     resolution: {integrity: sha512-M5lSukoWi1If8dhQAUCvj4H8vUt3vOnwbQBH9DdTm/s4Ym2B/3dPMtYZeJmq7Q3S3Pa+I94DcZ7pc9bP14cWIQ==}

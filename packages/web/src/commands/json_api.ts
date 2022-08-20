@@ -16,6 +16,7 @@ import puppeteer from "puppeteer";
 import domParser from "dom-parser";
 import { writeFileSync, mkdirSync, readFileSync } from "fs";
 import dayjs from "dayjs";
+import crypto from "crypto-js";
 
 const DOM = new domParser();
 
@@ -101,6 +102,7 @@ type CreateOGP = {
   detail: string;
   width: number;
   height: number;
+  imageName: string;
 };
 
 const createOGP = async ({
@@ -111,6 +113,7 @@ const createOGP = async ({
   detail,
   width,
   height,
+  imageName,
 }: CreateOGP) => {
   mkdirSync(`public/ogp/${width}x${height}${path}`, { recursive: true });
 
@@ -167,7 +170,7 @@ const createOGP = async ({
 
     const ogp = Buffer.from(b64string, "base64");
 
-    writeFileSync(`public/ogp/${width}x${height}${path}/${title}.png`, ogp);
+    writeFileSync(`public/ogp/${width}x${height}${path}/${imageName}.png`, ogp);
   } catch (e) {
     console.log(e);
   }
@@ -193,6 +196,7 @@ const createQiitaOGP = async (browser: puppeteer.Browser, ogpHTML: string) => {
         .replace(/<style>.+<\/style>/g, "")
         .replace(/<(".*?"|'.*?'|[^'"])*?>/g, "")
         .slice(0, 90);
+      const imageName = crypto.AES.encrypt("hogehoge", "key").toString();
 
       await createOGP({
         browser,
@@ -202,6 +206,7 @@ const createQiitaOGP = async (browser: puppeteer.Browser, ogpHTML: string) => {
         detail,
         width: 1200,
         height: 630,
+        imageName,
       });
 
       await createOGP({
@@ -212,6 +217,7 @@ const createQiitaOGP = async (browser: puppeteer.Browser, ogpHTML: string) => {
         detail,
         width: 630,
         height: 630,
+        imageName,
       });
 
       return {
@@ -222,8 +228,8 @@ const createQiitaOGP = async (browser: puppeteer.Browser, ogpHTML: string) => {
         body: detail,
         link: `/blogs/qiita/${title}`,
         ogp: {
-          large: `/ogp/1200x630/blogs/qiita/${title}.png`,
-          small: `/ogp/630x630/blogs/qiita/${title}.png`,
+          large: `/ogp/1200x630/blogs/qiita/${imageName}.png`,
+          small: `/ogp/630x630/blogs/qiita/${imageName}.png`,
         },
       };
     })
@@ -252,6 +258,7 @@ const createHatenaOGP = async (browser: puppeteer.Browser, ogpHTML: string) => {
         .replace(/<style>.+<\/style>/g, "")
         .replace(/<(".*?"|'.*?'|[^'"])*?>/g, "")
         .slice(0, 90);
+      const imageName = crypto.AES.encrypt("hogehoge", "key").toString();
 
       await createOGP({
         browser,
@@ -261,6 +268,7 @@ const createHatenaOGP = async (browser: puppeteer.Browser, ogpHTML: string) => {
         detail,
         width: 1200,
         height: 630,
+        imageName,
       });
 
       await createOGP({
@@ -271,6 +279,7 @@ const createHatenaOGP = async (browser: puppeteer.Browser, ogpHTML: string) => {
         detail,
         width: 630,
         height: 630,
+        imageName,
       });
 
       return {
@@ -281,8 +290,8 @@ const createHatenaOGP = async (browser: puppeteer.Browser, ogpHTML: string) => {
         body: detail,
         link: `/blogs/hatena/${title}`,
         ogp: {
-          large: `/ogp/1200x630/blogs/hatena/${title}.png`,
-          small: `/ogp/630x630/blogs/hatena/${title}.png`,
+          large: `/ogp/1200x630/blogs/hatena/${imageName}.png`,
+          small: `/ogp/630x630/blogs/hatena/${imageName}.png`,
         },
       };
     })
@@ -315,6 +324,7 @@ const createZennOGP = async (browser: puppeteer.Browser, ogpHTML: string) => {
         .replace(/^[\W|\w]*\n---/, "")
         .replace(/\n/g, "")
         .slice(0, 90);
+      const imageName = crypto.AES.encrypt("hogehoge", "key").toString();
 
       await createOGP({
         browser,
@@ -324,6 +334,7 @@ const createZennOGP = async (browser: puppeteer.Browser, ogpHTML: string) => {
         detail: body,
         width: 1200,
         height: 630,
+        imageName,
       });
 
       await createOGP({
@@ -334,6 +345,7 @@ const createZennOGP = async (browser: puppeteer.Browser, ogpHTML: string) => {
         detail: body,
         width: 630,
         height: 630,
+        imageName,
       });
 
       return {
@@ -346,8 +358,8 @@ const createZennOGP = async (browser: puppeteer.Browser, ogpHTML: string) => {
         body,
         link: `/blogs/zenn/${title}`,
         ogp: {
-          large: `/ogp/1200x630/blogs/zenn/${title}.png`,
-          small: `/ogp/630x630/blogs/zenn/${title}.png`,
+          large: `/ogp/1200x630/blogs/zenn/${imageName}.png`,
+          small: `/ogp/630x630/blogs/zenn/${imageName}.png`,
         },
       };
     })
