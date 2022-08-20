@@ -4,9 +4,10 @@ import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 import { css } from "@emotion/react";
 
 import { ThemaClassname } from "../index";
+const themaClassname = ThemaClassname();
 
 const Component = () => (
-  <div className={ThemaClassname()}>
+  <div className={themaClassname.themaVariables}>
     <span
       css={css`
         color: var(--border-color);

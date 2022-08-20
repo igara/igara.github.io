@@ -12,22 +12,22 @@ const BlogHatena: NextPage<{
     large: string;
     small: string;
   };
-}> = ({ title, body, description, ogp }) => {
+  url: string;
+}> = ({ title, body, description, ogp, url }) => {
   return (
     <>
       <NextHead>
-        <title>{title} / Hatena バックアップ / syonet</title>
+        <title>{title} / Hatena バックアップ</title>
         <meta name="description" content={description} />
-        <meta
-          property="og:title"
-          content={`${title} / Hatena バックアップ / syonet`}
-        />
+        <meta property="og:title" content={`${title} / Hatena バックアップ`} />
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="igara.github.io" />
         <meta
           property="og:image"
           content={`${process.env.NEXT_PUBLIC_WEB_HOST}${ogp.large}`}
         />
         <meta property="og:description" content={description} />
+        <meta property="og:url" content={url} />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" href="/favicon.ico" />
       </NextHead>
@@ -51,6 +51,7 @@ export const getStaticProps = async ({ params }: StaticProps) => {
       body: blog.body,
       description: blog.description,
       ogp: blog.ogp,
+      url: `${process.env.NEXT_PUBLIC_WEB_HOST}/blogs/hatena/${title}`,
     },
     revalidate: 1,
   };
