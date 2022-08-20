@@ -16,7 +16,7 @@ import puppeteer from "puppeteer";
 import domParser from "dom-parser";
 import { writeFileSync, mkdirSync, readFileSync } from "fs";
 import dayjs from "dayjs";
-import crypto from "crypto-js";
+import SHA256 from "crypto-js/sha256";
 
 const DOM = new domParser();
 
@@ -196,7 +196,7 @@ const createQiitaOGP = async (browser: puppeteer.Browser, ogpHTML: string) => {
         .replace(/<style>.+<\/style>/g, "")
         .replace(/<(".*?"|'.*?'|[^'"])*?>/g, "")
         .slice(0, 90);
-      const imageName = crypto.AES.encrypt("hogehoge", "key").toString();
+      const imageName = SHA256(title).toString();
 
       await createOGP({
         browser,
@@ -258,7 +258,7 @@ const createHatenaOGP = async (browser: puppeteer.Browser, ogpHTML: string) => {
         .replace(/<style>.+<\/style>/g, "")
         .replace(/<(".*?"|'.*?'|[^'"])*?>/g, "")
         .slice(0, 90);
-      const imageName = crypto.AES.encrypt("hogehoge", "key").toString();
+      const imageName = SHA256(title).toString();
 
       await createOGP({
         browser,
@@ -324,7 +324,7 @@ const createZennOGP = async (browser: puppeteer.Browser, ogpHTML: string) => {
         .replace(/^[\W|\w]*\n---/, "")
         .replace(/\n/g, "")
         .slice(0, 90);
-      const imageName = crypto.AES.encrypt("hogehoge", "key").toString();
+      const imageName = SHA256(title).toString();
 
       await createOGP({
         browser,
