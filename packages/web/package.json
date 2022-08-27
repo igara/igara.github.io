@@ -5,21 +5,15 @@
     "start": "next start",
     "build": "next build",
     "export": "cross-env NODE_ENV=\"production\" next build && cross-env NODE_ENV=\"production\" next export",
-    "lint": "next lint",
-    "json:api": "node --require esbuild-register ./src/commands/json_api.ts"
+    "lint": "next lint"
   },
   "dependencies": {
+    "@igara.github.io/json": "../json",
+    "@igara.github.io/ui": "../ui",
     "@emotion/react": "11.10.0",
     "classnames": "2.3.1",
     "cross-env": "7.0.3",
-    "crypto-js": "4.1.1",
-    "dayjs": "1.11.4",
-    "dom-parser": "0.1.6",
-    "esbuild": "0.15.1",
-    "esbuild-register": "3.3.3",
-    "github-markdown-css": "5.1.0",
     "next": "12.2.4",
-    "puppeteer": "16.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-is": "18.2.0",
@@ -27,7 +21,6 @@
   },
   "devDependencies": {
     "@babel/core": "7.18.10",
-    "@igara.github.io/ui": "../ui",
     "@types/react": "18.0.15",
     "eslint": "8.21.0",
     "eslint-config-next": "12.2.4",

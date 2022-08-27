@@ -2,7 +2,7 @@ import { NextPage } from "next";
 
 import { BlogsPage } from "src/components";
 
-import { AllJSON, allJSON } from "src/api";
+import { AllJSON, allJSON } from "@igara.github.io/json";
 
 type Props = { blogs: AllJSON };
 

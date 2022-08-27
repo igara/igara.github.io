@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import NextHead from "next/head";
 
 import { BlogZennPage } from "src/components";
-import { zennArticleListJSON } from "src/api";
+import { zennArticleListJSON } from "@igara.github.io/json";
 
 const BlogZenn: NextPage<{
   title: string;

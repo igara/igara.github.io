@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import NextHead from "next/head";
 
 import { BlogHatenaPage } from "src/components";
-import { hatenaListJSON } from "src/api";
+import { hatenaListJSON } from "@igara.github.io/json";
 
 const BlogHatena: NextPage<{
   title: string;

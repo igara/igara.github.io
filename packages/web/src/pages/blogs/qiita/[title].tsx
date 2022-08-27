@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import NextHead from "next/head";
 
 import { BlogQiitaPage } from "src/components";
-import { qiitaListJSON } from "src/api";
+import { qiitaListJSON } from "@igara.github.io/json";
 
 const BlogQiita: NextPage<{
   title: string;
