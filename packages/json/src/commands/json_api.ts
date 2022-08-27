@@ -115,7 +115,7 @@ const createOGP = async ({
   height,
   imageName,
 }: CreateOGP) => {
-  mkdirSync(`public/ogp/${width}x${height}${path}`, { recursive: true });
+  mkdirSync(`../web/public/ogp/${width}x${height}${path}`, { recursive: true });
 
   const ogpTargetPage = await browser.newPage();
   const newOGPPage = await browser.newPage();
@@ -170,7 +170,10 @@ const createOGP = async ({
 
     const ogp = Buffer.from(b64string, "base64");
 
-    writeFileSync(`public/ogp/${width}x${height}${path}/${imageName}.png`, ogp);
+    writeFileSync(
+      `../web/public/ogp/${width}x${height}${path}/${imageName}.png`,
+      ogp
+    );
   } catch (e) {
     console.log(e);
   }
