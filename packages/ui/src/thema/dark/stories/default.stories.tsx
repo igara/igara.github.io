@@ -1,17 +1,11 @@
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 import { css } from "@emotion/react";
-import classnames from "classnames";
 
 import { ThemaClassname } from "../../../index";
 const themaClassname = ThemaClassname("dark");
 
 const Component = () => (
-  <div
-    className={classnames(
-      themaClassname.commonVariables,
-      themaClassname.themaVariables
-    )}
-  >
+  <div className={themaClassname.variables}>
     <div
       css={css`
         padding: var(--interval-8);

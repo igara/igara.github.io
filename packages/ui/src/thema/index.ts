@@ -1,3 +1,4 @@
+import classnames from "classnames";
 import commonCSS from "./common.module.css";
 import darkCSS from "./dark/thema.module.css";
 import lightCSS from "./light/thema.module.css";
@@ -29,15 +30,13 @@ export const ThemaClassname = (themaName?: Thema) => {
 
   if (themaName === "light") {
     return {
-      commonVariables: commonCSS.commonVariables,
-      themaVariables: lightCSS.themaVariables,
+      variables: classnames(commonCSS.commonVariables, lightCSS.themaVariables),
       gitHubMarkdown: gitHubMarkdownLightCSS["markdown-body"],
     };
   }
 
   return {
-    commonVariables: commonCSS.commonVariables,
-    themaVariables: darkCSS.themaVariables,
+    variables: classnames(commonCSS.commonVariables, darkCSS.themaVariables),
     gitHubMarkdown: gitHubMarkdownDarkCSS["markdown-body"],
   };
 };
