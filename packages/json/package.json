@@ -1,5 +1,13 @@
 {
   "name": "@igara.github.io/json",
+  "main": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.esm.js",
+    "require": "./dist/index.cjs.js",
+    "node": "./dist/index.esm.js",
+    "default": "./dist/index.cjs.js"
+  },
   "scripts": {
     "json:api": "node --require esbuild-register ./src/commands/json_api.ts",
     "build": "pnpm run rm:dist && pnpm run build:esbuild && pnpm run build:types",
