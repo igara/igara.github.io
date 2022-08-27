@@ -1,5 +1,1 @@
-# @igara.github.io/storybook
-
-```bash
-pnpm install
-```
+# @igara.github.io/ui
