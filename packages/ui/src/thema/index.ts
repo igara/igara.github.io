@@ -2,21 +2,21 @@ import classnames from "classnames";
 import commonCSS from "./common.module.css";
 import darkCSS from "./dark/thema.module.css";
 import lightCSS from "./light/thema.module.css";
-import gitHubMarkdownDarkCSS from "github-markdown-css/github-markdown-dark.css";
-import gitHubMarkdownLightCSS from "github-markdown-css/github-markdown-light.css";
+import gitHubMarkdownDarkCSS from "./dark/github_markdown.module.css";
+import gitHubMarkdownLightCSS from "./light/github_markdown.module.css";
 
 const thema = ["dark", "light"] as const;
 type Thema = typeof thema[number];
 
 export const ThemaClassname = (themaName?: Thema) => {
   if (themaName) {
-    if (window && window.localStorage) {
+    if (typeof window !== "undefined" && window.localStorage) {
       window.localStorage.setItem("thema", themaName);
     }
   }
   let selectedThemaName = themaName;
 
-  if (window && window.localStorage) {
+  if (typeof window !== "undefined" && window.localStorage) {
     const selected = window.localStorage.getItem("thema") as Thema;
 
     if (thema.includes(selected)) {
