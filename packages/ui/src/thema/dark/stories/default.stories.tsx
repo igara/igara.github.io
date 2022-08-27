@@ -11,7 +11,7 @@ const Component = () => (
         padding: var(--interval-8);
         color: var(--font-color);
         background: var(--background-color);
-        border: var(--border-color) var(--border-size) var(--border-style-solid);
+        border: var(--border-color) var(--border-size) solid;
       `}
     >
       <div
@@ -19,8 +19,7 @@ const Component = () => (
           padding: var(--interval-8);
           color: var(--font-color);
           background: var(--background-color);
-          border: var(--border-color) var(--border-size)
-            var(--border-style-solid);
+          border: var(--border-color) var(--border-size) solid;
         `}
       >
         dark themaの検証
