@@ -9,6 +9,8 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "json:api": "(cd packages/json && pnpm run json:api)",
+    "json:build": "(cd packages/json && pnpm run build)",
     "ui:build": "(cd packages/ui && pnpm run build)",
     "web:start": "(cd packages/web && pnpm run start)",
     "web:export": "(cd packages/web && pnpm run export)"

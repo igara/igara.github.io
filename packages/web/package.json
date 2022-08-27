@@ -1,6 +1,5 @@
 {
   "name": "@igara.github.io/web",
-  "version": "0.0.57",
   "scripts": {
     "dev": "next dev",
     "start": "next start",
