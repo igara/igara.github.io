@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recess-order",
+    "stylelint-config-prettier"
+  ],
+  "plugins": [
+    "stylelint-prettier",
+    "@igara.github.io/stylelint-plugin-thema-rule"
+  ],
+  "rules": {
+    "@igara.github.io/thema-rule": [
+      true,
+      {
+        "severity": "warning"
+      }
+    ],
+    "prettier/prettier": true,
+    "selector-class-pattern": null,
+    "keyframes-name-pattern": "^[a-z][a-zA-Z0-9]+$",
+    "font-family-no-missing-generic-family-keyword": null
+  }
+}

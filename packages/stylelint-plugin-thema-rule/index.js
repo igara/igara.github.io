@@ -1,35 +1,11 @@
 const stylelint = require("stylelint");
 const fs = require("fs");
+const path = require("path");
 
-const commonCSS = fs.readFileSync("../ui/src/thema/common.module.css", "utf-8");
-const darkThemaCSS = fs.readFileSync(
-  "../ui/src/thema/dark/thema.module.css",
+const commonCSS = fs.readFileSync(
+  path.resolve(__dirname, "../ui/src/thema/common.module.css"),
   "utf-8"
 );
-const lightThemaCSS = fs.readFileSync(
-  "../ui/src/thema/light/thema.module.css",
-  "utf-8"
-);
-
-const darkThemaMatch = darkThemaCSS.match(/--.*;/g);
-const darkThemaValiables = darkThemaMatch.map((v) => {
-  const key = v.match(/--.*:/)[0].replace(":", "");
-  const value = v.match(/ .*;/)[0].replace(" ", "").replace(";", "");
-
-  return {
-    [key]: value,
-  };
-});
-
-const lightThemaMatch = lightThemaCSS.match(/--.*;/g);
-const lightThemaValiables = lightThemaMatch.map((v) => {
-  const key = v.match(/--.*:/)[0].replace(":", "");
-  const value = v.match(/ .*;/)[0].replace(" ", "").replace(";", "");
-
-  return {
-    [key]: value,
-  };
-});
 
 const ruleName = "@igara.github.io/thema-rule";
 const messages = stylelint.utils.ruleMessages(ruleName, {
@@ -43,6 +19,35 @@ const checkVariableCount = ({ decl, result }) => {
   const css = decl.source.input.css;
   const cssMatch = css.match(/--.*;/g);
   const cssValiables = cssMatch.map((v) => {
+    const key = v.match(/--.*:/)[0].replace(":", "");
+    const value = v.match(/ .*;/)[0].replace(" ", "").replace(";", "");
+
+    return {
+      [key]: value,
+    };
+  });
+
+  const darkThemaCSS = fs.readFileSync(
+    path.resolve(__dirname, "../ui/src/thema/dark/thema.module.css"),
+    "utf-8"
+  );
+  const lightThemaCSS = fs.readFileSync(
+    path.resolve(__dirname, "../ui/src/thema/light/thema.module.css"),
+    "utf-8"
+  );
+
+  const darkThemaMatch = darkThemaCSS.match(/--.*;/g);
+  const darkThemaValiables = darkThemaMatch.map((v) => {
+    const key = v.match(/--.*:/)[0].replace(":", "");
+    const value = v.match(/ .*;/)[0].replace(" ", "").replace(";", "");
+
+    return {
+      [key]: value,
+    };
+  });
+
+  const lightThemaMatch = lightThemaCSS.match(/--.*;/g);
+  const lightThemaValiables = lightThemaMatch.map((v) => {
     const key = v.match(/--.*:/)[0].replace(":", "");
     const value = v.match(/ .*;/)[0].replace(" ", "").replace(";", "");
 

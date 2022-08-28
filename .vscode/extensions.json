@@ -1,7 +1,9 @@
 {
   "recommendations": [
     "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint",
     "esbenp.prettier-vscode",
+    "stuartzhang.stylelint-stzhang",
     "cpylua.language-postcss",
     "vunguyentuan.vscode-css-variables"
   ]

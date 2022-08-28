@@ -13,5 +13,13 @@
   "files.eol": "\n",
   "files.exclude": {},
   "eslint.workingDirectories": [{ "mode": "auto" }],
-  "cssVariables.lookupFiles": ["**/thema.module.css", "**/common.module.css"]
+  "cssVariables.lookupFiles": ["**/thema.module.css", "**/common.module.css"],
+  "css.validate": false,
+  "stylelint.validate": ["css"],
+  "[css]": {
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    }
+  }
 }
