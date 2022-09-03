@@ -13,10 +13,11 @@
     "json:thema": "(cd packages/json && pnpm run json:thema)",
     "json:build": "(cd packages/json && pnpm run build)",
     "ui:build": "(cd packages/ui && pnpm run build)",
-    "web:start": "(cd packages/web && pnpm run start)",
+    "web:start": "(cd packages/web && pnpm run dev)",
     "web:export": "(cd packages/web && pnpm run export)",
     "lint": "pnpm run lint:eslint && pnpm run lint:stylelint",
-    "lint:eslint": "eslint **/src --ext ts,tsx",
+    "lint:ui": "(cd packages/ui && pnpm run lint)",
+    "lint:web": "(cd packages/web && pnpm run lint)",
     "lint:stylelint": "stylelint \"**/src/**/*.css\""
   },
   "dependencies": {

@@ -12,7 +12,8 @@
     "build": "pnpm run rm:dist && pnpm run build:esbuild && pnpm run build:types",
     "build:esbuild": "node build.js",
     "build:types": "tsc --declaration --emitDeclarationOnly --declarationDir \"./dist\"",
-    "rm:dist": "node -e \"fs.rmSync(\\\"dist\\\", { recursive: true, force: true })\""
+    "rm:dist": "node -e \"fs.rmSync(\\\"dist\\\", { recursive: true, force: true })\"",
+    "lint": "next lint"
   },
   "dependencies": {
     "@emotion/react": "11.10.0",
