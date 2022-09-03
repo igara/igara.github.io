@@ -16,6 +16,8 @@
     "rm:dist": "node -e \"fs.rmSync(\\\"dist\\\", { recursive: true, force: true })\""
   },
   "dependencies": {
+    "@igara.github.io/ui": "../ui",
+    "@igara.github.io/web": "../web",
     "cross-env": "7.0.3",
     "crypto-js": "4.1.1",
     "dayjs": "1.11.4",
@@ -26,8 +28,7 @@
     "puppeteer": "16.1.0"
   },
   "devDependencies": {
-    "@igara.github.io/ui": "../ui",
-    "@igara.github.io/web": "../web",
+    "@types/node": "18.7.14",
     "eslint": "8.21.0",
     "eslint-config-next": "12.2.4",
     "typescript": "4.7.4"
