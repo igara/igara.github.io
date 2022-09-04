@@ -5,11 +5,11 @@ const fs = require("fs");
 
 fs.copyFileSync(
   "./node_modules/github-markdown-css/github-markdown-dark.css",
-  "./src/thema/dark/github_markdown.module.css"
+  "./src/thema/dark/github_markdown.txt"
 );
 fs.copyFileSync(
   "./node_modules/github-markdown-css/github-markdown-light.css",
-  "./src/thema/light/github_markdown.module.css"
+  "./src/thema/light/github_markdown.txt"
 );
 
 const cssPlugin = cssModulesPlugin();
@@ -28,7 +28,7 @@ build({
   ...shared,
   format: "esm",
   outfile: "./dist/index.esm.js",
-  target: ["ES6"],
+  target: ["esnext"],
   plugins: [cssPlugin],
 });
 
@@ -36,6 +36,7 @@ build({
   ...shared,
   format: "cjs",
   outfile: "./dist/index.cjs.js",
-  target: ["ES6"],
+  platform: "node",
+  target: ["node16"],
   plugins: [cssPlugin],
 });

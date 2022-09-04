@@ -1,19 +1,13 @@
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 import { css } from "@emotion/react";
 
-import { ThemaClassname } from "../../../index";
-const themaClassname = ThemaClassname("dark");
+import { useThema, Thema } from "../";
 
-const Component = () => (
-  <div className={themaClassname.variables}>
-    <div
-      css={css`
-        padding: var(--interval-8);
-        color: var(--font-color);
-        background: var(--background-color);
-        border: var(--border-color) var(--border-size) solid;
-      `}
-    >
+const Component = () => {
+  const { themaName, variables } = useThema();
+
+  return (
+    <Thema variables={variables}>
       <div
         css={css`
           padding: var(--interval-8);
@@ -22,14 +16,23 @@ const Component = () => (
           border: var(--border-color) var(--border-size) solid;
         `}
       >
-        dark themaの検証
+        <div
+          css={css`
+            padding: var(--interval-8);
+            color: var(--font-color);
+            background: var(--background-color);
+            border: var(--border-color) var(--border-size) solid;
+          `}
+        >
+          {themaName} themaの検証
+        </div>
       </div>
-    </div>
-  </div>
-);
+    </Thema>
+  );
+};
 
 const Meta: ComponentMeta<typeof Component> = {
-  title: "thema/dark",
+  title: "components/Thema",
   component: Component,
 };
 

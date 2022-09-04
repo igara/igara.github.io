@@ -3,6 +3,7 @@ import NextHead from "next/head";
 
 import { BlogHatenaPage } from "src/components";
 import { hatenaListJSON } from "@igara.github.io/json";
+import { useThema, Thema, GithubMarkdownStyle } from "@igara.github.io/ui";
 
 const BlogHatena: NextPage<{
   title: string;
@@ -14,6 +15,8 @@ const BlogHatena: NextPage<{
   };
   url: string;
 }> = ({ title, body, description, ogp, url }) => {
+  const { variables, themaName } = useThema();
+
   return (
     <>
       <NextHead>
@@ -32,7 +35,10 @@ const BlogHatena: NextPage<{
         <link rel="icon" href="/favicon.ico" />
       </NextHead>
 
-      <BlogHatenaPage body={body} title={title} />
+      <Thema variables={variables}>
+        <GithubMarkdownStyle themaName={themaName} />
+        <BlogHatenaPage body={body} title={title} />
+      </Thema>
     </>
   );
 };

@@ -17,4 +17,12 @@ module.exports = {
     ...options,
     presets: [...options.presets, "@emotion/babel-preset-css-prop"],
   }),
+  webpackFinal: async (config, { configType }) => {
+    config.module.rules.push({
+      test: /\.txt$/,
+      use: ["raw-loader"],
+    });
+
+    return config;
+  },
 };

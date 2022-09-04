@@ -1,1 +1,1 @@
-export * from "./thema";
+export * from "./components";

@@ -3,6 +3,7 @@ import NextHead from "next/head";
 
 import { BlogZennPage } from "src/components";
 import { zennArticleListJSON } from "@igara.github.io/json";
+import { useThema, Thema } from "@igara.github.io/ui";
 
 const BlogZenn: NextPage<{
   title: string;
@@ -14,6 +15,8 @@ const BlogZenn: NextPage<{
   };
   url: string;
 }> = ({ title, body, description, ogp, url }) => {
+  const { variables, themaName } = useThema();
+
   return (
     <>
       <NextHead>
@@ -32,7 +35,9 @@ const BlogZenn: NextPage<{
         <link rel="icon" href="/favicon.ico" />
       </NextHead>
 
-      <BlogZennPage title={title} body={body} />
+      <Thema variables={variables}>
+        <BlogZennPage title={title} body={body} />
+      </Thema>
     </>
   );
 };

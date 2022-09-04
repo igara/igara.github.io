@@ -3,6 +3,7 @@ import NextHead from "next/head";
 
 import { BlogQiitaPage } from "src/components";
 import { qiitaListJSON } from "@igara.github.io/json";
+import { useThema, Thema, GithubMarkdownStyle } from "@igara.github.io/ui";
 
 const BlogQiita: NextPage<{
   title: string;
@@ -14,6 +15,8 @@ const BlogQiita: NextPage<{
   };
   url: string;
 }> = ({ title, body, description, ogp, url }) => {
+  const { variables, themaName } = useThema();
+
   return (
     <>
       <NextHead>
@@ -32,7 +35,10 @@ const BlogQiita: NextPage<{
         <link rel="icon" href="/favicon.ico" />
       </NextHead>
 
-      <BlogQiitaPage title={title} body={body} />
+      <Thema variables={variables}>
+        <GithubMarkdownStyle themaName={themaName} />
+        <BlogQiitaPage title={title} body={body} />
+      </Thema>
     </>
   );
 };
