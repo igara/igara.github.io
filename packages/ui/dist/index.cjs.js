@@ -1,4 +1,4 @@
-var f=Object.create;var t=Object.defineProperty;var u=Object.getOwnPropertyDescriptor;var x=Object.getOwnPropertyNames;var v=Object.getPrototypeOf,z=Object.prototype.hasOwnProperty;var S=(o,d)=>{for(var n in d)t(o,n,{get:d[n],enumerable:!0})},b=(o,d,n,e)=>{if(d&&typeof d=="object"||typeof d=="function")for(let a of x(d))!z.call(o,a)&&a!==n&&t(o,a,{get:()=>d[a],enumerable:!(e=u(d,a))||e.enumerable});return o};var M=(o,d,n)=>(n=o!=null?f(v(o)):{},b(d||!o||!o.__esModule?t(n,"default",{value:o,enumerable:!0}):n,o)),C=o=>b(t({},"__esModule",{value:!0}),o);var q={};S(q,{GithubMarkdownStyle:()=>R,Thema:()=>V,useThema:()=>I});module.exports=C(q);var r=require("react"),l=M(require("classnames"));var k="be9603a87e6c2e4fffb3860f346d18780b164680c0ee562304ca99194c8e26c8",j=`._commonVariables_1kw30_1 {
+var f=Object.create;var t=Object.defineProperty;var u=Object.getOwnPropertyDescriptor;var x=Object.getOwnPropertyNames;var v=Object.getPrototypeOf,z=Object.prototype.hasOwnProperty;var S=(o,d)=>{for(var n in d)t(o,n,{get:d[n],enumerable:!0})},b=(o,d,n,e)=>{if(d&&typeof d=="object"||typeof d=="function")for(let r of x(d))!z.call(o,r)&&r!==n&&t(o,r,{get:()=>d[r],enumerable:!(e=u(d,r))||e.enumerable});return o};var M=(o,d,n)=>(n=o!=null?f(v(o)):{},b(d||!o||!o.__esModule?t(n,"default",{value:o,enumerable:!0}):n,o)),C=o=>b(t({},"__esModule",{value:!0}),o);var L={};S(L,{GithubMarkdownStyle:()=>R,Thema:()=>V,ZennMarkdownStyle:()=>q,useThema:()=>I});module.exports=C(L);var a=require("react"),l=M(require("classnames"));var c="1cb4d321f1689a576f673fdae8d73da118c66622bd7a0c5b124c1101cc4612ed",j=`._commonVariables_1kw30_1 {
   /* interval */
   --interval-0: 0;
   --interval-4: 4px;
@@ -24,13 +24,13 @@ var f=Object.create;var t=Object.defineProperty;var u=Object.getOwnPropertyDescr
   --line-height-32: 32px;
   --line-height-48: 48px;
 }
-`;(function(){if(!(typeof document>"u")&&!document.getElementById(k)){var o=document.createElement("style");o.id=k,o.textContent=j,document.head.appendChild(o)}})();var i={commonVariables:"_commonVariables_1kw30_1"};var p="02b363665d53ce81a3e0a842b01d8024447f6f275b14b96b6b48a5729fb63fd2",F=`._themaVariables_1flse_1 {
+`;(function(){if(!(typeof document>"u")&&!document.getElementById(c)){var o=document.createElement("style");o.id=c,o.textContent=j,document.head.appendChild(o)}})();var i={commonVariables:"_commonVariables_1kw30_1"};var k="8a6478e32ed7292c4f20cd02ac186a32f919113778fca834343d521b5f4a926c",F=`._themaVariables_1flse_1 {
   --background-color: #202124;
   --font-color: #bdc1c6;
   --link-color: #8ab4f8;
   --border-color: #3c4043;
 }
-`;(function(){if(!(typeof document>"u")&&!document.getElementById(p)){var o=document.createElement("style");o.id=p,o.textContent=F,document.head.appendChild(o)}})();var c={themaVariables:"_themaVariables_1flse_1"};var y="4d9eed929de026f56810196b7a3a0174e22b21c19050b24d1326525c3cb77ba4",T=`._themaVariables_yhqdm_1 {
+`;(function(){if(!(typeof document>"u")&&!document.getElementById(k)){var o=document.createElement("style");o.id=k,o.textContent=F,document.head.appendChild(o)}})();var p={themaVariables:"_themaVariables_1flse_1"};var y="9c8d0a53d807bcc4504fad150fe0c6b2aadcf299758e17305a42fa05f5384854",T=`._themaVariables_yhqdm_1 {
   --background-color: #bdc1c6;
   --font-color: #202124;
   --link-color: #8ab4f8;
@@ -1917,4 +1917,8 @@ var f=Object.create;var t=Object.defineProperty;var u=Object.getOwnPropertyDescr
 .markdown-body ::-webkit-calendar-picker-indicator {
   filter: invert(50%);
 }
-`;var g=["dark","light"],B=o=>{typeof window<"u"&&window.localStorage&&g.includes(o)&&window.localStorage.setItem("thema",o)},N=()=>{let o;if(typeof window<"u"&&window.localStorage){let d=window.localStorage.getItem("thema");g.includes(d)&&(o=d)}return o||(o="dark"),o},I=()=>{let o=N(),[d,n]=(0,r.useState)(o),e=(0,r.useCallback)(m=>{B(m),n(m)},[n]),a=d==="dark"?(0,l.default)(i.commonVariables,c.themaVariables):(0,l.default)(i.commonVariables,w.themaVariables);return{setThema:e,themaName:d,variables:a}},V=({children:o,variables:d})=><div className={d}>{o}</div>,R=({themaName:o})=>{let[d,n]=(0,r.useState)("");return(0,r.useEffect)(()=>{d||n(o==="dark"?s:h)},[d]),<style>{d}</style>};0&&(module.exports={GithubMarkdownStyle,Thema,useThema});
+`;var g=["dark","light"],B=o=>{typeof window<"u"&&window.localStorage&&g.includes(o)&&window.localStorage.setItem("thema",o)},N=()=>{let o;if(typeof window<"u"&&window.localStorage){let d=window.localStorage.getItem("thema");g.includes(d)&&(o=d)}return o||(o="dark"),o},I=()=>{let o=N(),[d,n]=(0,a.useState)(o),e=(0,a.useCallback)(m=>{B(m),n(m)},[n]),r=d==="dark"?(0,l.default)(i.commonVariables,p.themaVariables):(0,l.default)(i.commonVariables,w.themaVariables);return{setThema:e,themaName:d,variables:r}},V=({children:o,variables:d})=><div className={d}>{o}</div>,R=({themaName:o})=>{let[d,n]=(0,a.useState)("");return(0,a.useEffect)(()=>{d||n(o==="dark"?s:h)},[d]),<style>{d}</style>},q=()=>{let[o,d]=(0,a.useState)("");return(0,a.useEffect)(()=>{o||d(`.znc {
+        color: var(--font-color);
+        background: var(--background-color);
+        border: var(--border-color) var(--border-size) solid;
+      }`)},[o]),<style>{o}</style>};0&&(module.exports={GithubMarkdownStyle,Thema,ZennMarkdownStyle,useThema});

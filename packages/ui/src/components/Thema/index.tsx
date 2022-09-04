@@ -89,3 +89,19 @@ export const GithubMarkdownStyle: React.FC<GithubMarkdownStyleProps> = ({
 
   return <style>{css}</style>;
 };
+
+export const ZennMarkdownStyle: React.FC = () => {
+  const [css, setCSS] = useState("");
+
+  useEffect(() => {
+    if (!css) {
+      setCSS(`.znc {
+        color: var(--font-color);
+        background: var(--background-color);
+        border: var(--border-color) var(--border-size) solid;
+      }`);
+    }
+  }, [css]);
+
+  return <style>{css}</style>;
+};

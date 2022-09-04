@@ -3,7 +3,7 @@ import NextHead from "next/head";
 
 import { BlogZennPage } from "src/components";
 import { zennArticleListJSON } from "@igara.github.io/json";
-import { useThema, Thema } from "@igara.github.io/ui";
+import { useThema, Thema, ZennMarkdownStyle } from "@igara.github.io/ui";
 
 const BlogZenn: NextPage<{
   title: string;
@@ -36,6 +36,7 @@ const BlogZenn: NextPage<{
       </NextHead>
 
       <Thema variables={variables}>
+        <ZennMarkdownStyle />
         <BlogZennPage title={title} body={body} />
       </Thema>
     </>
