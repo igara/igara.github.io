@@ -8,7 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "11.10.0",
+    "@emotion/react": "11.10.4",
     "@igara.github.io/json": "../json",
     "@igara.github.io/ui": "../ui",
     "classnames": "2.3.1",

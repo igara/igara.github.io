@@ -1,4 +1,6 @@
 import React, { useState, useCallback, useEffect } from "react";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
 import classnames from "classnames";
 import commonCSS from "../../thema/common.module.css";
 import darkCSS from "../../thema/dark/thema.module.css";
@@ -63,10 +65,28 @@ export const useThema = () => {
 interface ThemaProps {
   children?: React.ReactNode;
   variables: string;
+  themaName: ThemaName;
 }
 
-export const Thema: React.FC<ThemaProps> = ({ children, variables }) => {
-  return <div className={variables}>{children}</div>;
+export const Thema: React.FC<ThemaProps> = ({
+  children,
+  variables,
+  themaName,
+}) => {
+  const darkTheme = createTheme({
+    palette: {
+      mode: themaName,
+    },
+  });
+
+  return (
+    <div className={variables}>
+      <ThemeProvider theme={darkTheme}>
+        <CssBaseline />
+        {children}
+      </ThemeProvider>
+    </div>
+  );
 };
 
 interface GithubMarkdownStyleProps {

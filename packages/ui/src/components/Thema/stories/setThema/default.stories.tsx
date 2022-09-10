@@ -7,7 +7,7 @@ const Component = () => {
   const { themaName, setThema, variables } = useThema();
 
   return (
-    <Thema variables={variables}>
+    <Thema variables={variables} themaName={themaName}>
       <div
         css={css`
           padding: var(--interval-8);
