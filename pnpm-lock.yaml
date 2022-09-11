@@ -11,11 +11,13 @@ importers:
       '@storybook/addon-essentials': 6.5.10
       '@storybook/addon-interactions': 6.5.10
       '@storybook/addon-links': 6.5.10
+      '@storybook/addons': ^6.5.10
       '@storybook/builder-webpack5': 6.5.10
       '@storybook/jest': 0.0.10
       '@storybook/manager-webpack5': 6.5.10
       '@storybook/react': 6.5.10
       '@storybook/testing-library': 0.0.13
+      '@storybook/theming': ^6.5.10
       '@types/react': 18.0.15
       babel-loader: 8.2.5
       classnames: 2.3.1
@@ -43,11 +45,13 @@ importers:
       '@storybook/addon-essentials': 6.5.10_ohnyoiqw5c3ezouth7dxwz74mu
       '@storybook/addon-interactions': 6.5.10_jttgo2wwvppil2em44w5eksf2i
       '@storybook/addon-links': 6.5.10_biqbaboplfbrettd7655fr4n2y
+      '@storybook/addons': 6.5.10_biqbaboplfbrettd7655fr4n2y
       '@storybook/builder-webpack5': 6.5.10_bb2lpehc4sm6fnn2zwweqmbmoy
       '@storybook/jest': 0.0.10_biqbaboplfbrettd7655fr4n2y
       '@storybook/manager-webpack5': 6.5.10_bb2lpehc4sm6fnn2zwweqmbmoy
       '@storybook/react': 6.5.10_vrwaf7wh65dkcsj4i5xx65n5pi
       '@storybook/testing-library': 0.0.13_biqbaboplfbrettd7655fr4n2y
+      '@storybook/theming': 6.5.10_biqbaboplfbrettd7655fr4n2y
       '@types/react': 18.0.15
       babel-loader: 8.2.5_xc6oct4hcywdrbo4ned6ytbybm
       classnames: 2.3.1

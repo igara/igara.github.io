@@ -39,8 +39,10 @@ jobs:
           version: 7
       - name: Install dependencies
         run: pnpm install
-      - name: Build
-        run: (cd packages/web && pnpm run export)
+      - name: storybook
+        run: npm run build-storybook
+      - name: export
+        run: npm run web:export
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
