@@ -10,6 +10,7 @@
   },
   "scripts": {
     "json:api": "node --require esbuild-register ./src/commands/json_api.ts",
+    "json:thema": "node --require esbuild-register ./src/commands/json_thema.ts",
     "build": "pnpm run rm:dist && pnpm run build:esbuild && pnpm run build:types",
     "build:esbuild": "node build.js",
     "build:types": "tsc --declaration --emitDeclarationOnly --declarationDir \"./dist\"",
@@ -31,6 +32,6 @@
     "@types/node": "18.7.14",
     "eslint": "8.21.0",
     "eslint-config-next": "12.2.4",
-    "typescript": "4.7.4"
+    "typescript": "4.8.3"
   }
 }

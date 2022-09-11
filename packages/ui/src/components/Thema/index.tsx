@@ -73,7 +73,7 @@ export const Thema: React.FC<ThemaProps> = ({
   variables,
   themaName,
 }) => {
-  const darkTheme = createTheme({
+  const muiThema = createTheme({
     palette: {
       mode: themaName,
     },
@@ -81,7 +81,7 @@ export const Thema: React.FC<ThemaProps> = ({
 
   return (
     <div className={variables}>
-      <ThemeProvider theme={darkTheme}>
+      <ThemeProvider theme={muiThema}>
         <CssBaseline />
         {children}
       </ThemeProvider>

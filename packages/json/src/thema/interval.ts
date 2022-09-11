@@ -7,3 +7,5 @@ export const Intervals = [
   24,
   32
 ] as const;
+
+export type IntervalType = typeof Intervals[number];

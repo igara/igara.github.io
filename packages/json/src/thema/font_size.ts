@@ -4,3 +4,5 @@ export const FontSizes = [
   24,
   32
 ] as const;
+
+export type FontSizeType = typeof FontSizes[number];

@@ -30,17 +30,26 @@ import { prettifyJSONStringify } from "src/utils";
 
     writeFileSync(
       "src/thema/interval.ts",
-      `export const Intervals = ${prettifyJSONStringify(intervals)} as const;`
+      `export const Intervals = ${prettifyJSONStringify(intervals)} as const;
+
+export type IntervalType = typeof Intervals[number];
+`
     );
     writeFileSync(
       "src/thema/font_size.ts",
-      `export const FontSizes = ${prettifyJSONStringify(fontSizes)} as const;`
+      `export const FontSizes = ${prettifyJSONStringify(fontSizes)} as const;
+
+export type FontSizeType = typeof FontSizes[number];
+`
     );
     writeFileSync(
       "src/thema/line_height.ts",
       `export const LineHeights = ${prettifyJSONStringify(
         lineHeights
-      )} as const;`
+      )} as const;
+
+export type LineHeightType = typeof LineHeights[number];
+`
     );
   } catch (e) {
     console.log(e);

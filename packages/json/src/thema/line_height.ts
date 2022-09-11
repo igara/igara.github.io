@@ -5,3 +5,5 @@ export const LineHeights = [
   32,
   48
 ] as const;
+
+export type LineHeightType = typeof LineHeights[number];
