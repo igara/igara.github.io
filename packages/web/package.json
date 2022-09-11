@@ -13,6 +13,7 @@
     "@igara.github.io/ui": "../ui",
     "classnames": "2.3.1",
     "cross-env": "7.0.3",
+    "csstype": "3.1.0",
     "next": "12.2.4",
     "next-transpile-modules": "9.0.0",
     "react": "18.2.0",

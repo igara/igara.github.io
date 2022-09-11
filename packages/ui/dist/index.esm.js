@@ -24,13 +24,13 @@ import{useState as e,useCallback as z,useEffect as w}from"react";import{ThemePro
   --line-height-32: 32px;
   --line-height-48: 48px;
 }
-`;(function(){if(!(typeof document>"u")&&!document.getElementById(i)){var o=document.createElement("style");o.id=i,o.textContent=g,document.head.appendChild(o)}})();var r={commonVariables:"_commonVariables_1kw30_1"};var l="8a6478e32ed7292c4f20cd02ac186a32f919113778fca834343d521b5f4a926c",f=`._themaVariables_1flse_1 {
+`;(function(){if(!(typeof document>"u")&&!document.getElementById(i)){var o=document.createElement("style");o.id=i,o.textContent=g,document.head.appendChild(o)}})();var r={commonVariables:"_commonVariables_1kw30_1"};var l="02b363665d53ce81a3e0a842b01d8024447f6f275b14b96b6b48a5729fb63fd2",f=`._themaVariables_1flse_1 {
   --background-color: #202124;
   --font-color: #bdc1c6;
   --link-color: #8ab4f8;
   --border-color: #3c4043;
 }
-`;(function(){if(!(typeof document>"u")&&!document.getElementById(l)){var o=document.createElement("style");o.id=l,o.textContent=f,document.head.appendChild(o)}})();var m={themaVariables:"_themaVariables_1flse_1"};var b="9c8d0a53d807bcc4504fad150fe0c6b2aadcf299758e17305a42fa05f5384854",u=`._themaVariables_yhqdm_1 {
+`;(function(){if(!(typeof document>"u")&&!document.getElementById(l)){var o=document.createElement("style");o.id=l,o.textContent=f,document.head.appendChild(o)}})();var m={themaVariables:"_themaVariables_1flse_1"};var b="4d9eed929de026f56810196b7a3a0174e22b21c19050b24d1326525c3cb77ba4",u=`._themaVariables_yhqdm_1 {
   --background-color: #bdc1c6;
   --font-color: #202124;
   --link-color: #8ab4f8;

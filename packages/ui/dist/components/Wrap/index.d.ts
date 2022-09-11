@@ -1,13 +1,20 @@
 import React from "react";
 import { IntervalType, FontSizeType, LineHeightType } from "@igara.github.io/json";
+import * as CSS from "csstype";
 interface Props {
     children?: React.ReactNode;
     element?: React.ElementType;
     interval?: {
-        all: IntervalType;
+        all?: IntervalType;
+        top?: IntervalType;
+        right?: IntervalType;
+        bottom?: IntervalType;
+        left?: IntervalType;
     };
     fontSize?: FontSizeType;
     lineHeight?: LineHeightType;
+    border?: boolean;
+    borderStyle?: CSS.Property.BorderStyle;
 }
 export declare const Wrap: React.FC<Props>;
 export {};
