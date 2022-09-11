@@ -12478,4 +12478,4 @@ Vagrantfile\u3092\u4F5C\u6210\u3057\u305F\u3044\u30C7\u30A3\u30EC\u30AF\u30C8\u3
 </code></pre>
 <p>\u4FBF\u5229\u305D\u3046\u306A\u3053\u3068\u3092\u66F8\u304D\u8DB3\u3059\u5F62\u5F0F\u3067\u3053\u306E\u6295\u7A3F\u3092\u66F4\u65B0\u3057\u3088\u3046</p>
 
-</div>`,link:"/blogs/qiita/[\u30E1\u30E2]Vagrant\u3092\u4F7F\u3063\u3066VM\u3092\u8D77\u52D5\u3059\u308B",ogp:{large:"/ogp/1200x630/blogs/qiita/cdc7f3f7830e2080eb386c6247d5b8ac4838567a38ca87bdf98488c970ff69a3.png",small:"/ogp/630x630/blogs/qiita/cdc7f3f7830e2080eb386c6247d5b8ac4838567a38ca87bdf98488c970ff69a3.png"}}];var Y=z;var Q=n=>JSON.stringify(n,null,2);var nn=[12,16,24,32];var en=[0,4,8,12,16,24,32];var an=[0,16,24,32,48];
+</div>`,link:"/blogs/qiita/[\u30E1\u30E2]Vagrant\u3092\u4F7F\u3063\u3066VM\u3092\u8D77\u52D5\u3059\u308B",ogp:{large:"/ogp/1200x630/blogs/qiita/cdc7f3f7830e2080eb386c6247d5b8ac4838567a38ca87bdf98488c970ff69a3.png",small:"/ogp/630x630/blogs/qiita/cdc7f3f7830e2080eb386c6247d5b8ac4838567a38ca87bdf98488c970ff69a3.png"}}];var Y=z;var Q=n=>JSON.stringify(n,null,2);var nn=["12","16","24","32"];var en=["auto","0","4","8","12","16","24","32"];var an=["0","16","24","32","48"];

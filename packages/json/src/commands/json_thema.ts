@@ -10,22 +10,22 @@ import { prettifyJSONStringify } from "src/utils";
       "utf-8"
     );
 
-    const intervalMatch = commonCSS.match(/--interval-.*:/g);
+    const intervalMatch = commonCSS.match(/--interval-\S+:/g);
     const intervals = intervalMatch.map((i) => {
-      const match = i.match(/[0-9]+/);
-      return Number(match[0]);
+      const match = i.replace("--interval-", "").replace(":", "");
+      return match;
     });
 
     const fontSizeMatch = commonCSS.match(/--font-size-.*:/g);
     const fontSizes = fontSizeMatch.map((i) => {
       const match = i.match(/[0-9]+/);
-      return Number(match[0]);
+      return match[0];
     });
 
     const lineHeightMatch = commonCSS.match(/--line-height-.*:/g);
     const lineHeights = lineHeightMatch.map((i) => {
       const match = i.match(/[0-9]+/);
-      return Number(match[0]);
+      return match[0];
     });
 
     writeFileSync(

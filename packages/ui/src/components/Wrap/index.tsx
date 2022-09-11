@@ -27,12 +27,12 @@ export const Wrap: React.FC<Props> = ({
   children,
   element: Element = "span",
   interval = {},
-  fontSize = 12,
-  lineHeight = 16,
+  fontSize = "12",
+  lineHeight = "16",
   border = false,
   borderStyle = "solid",
 }) => {
-  const allInterval = interval.all ? interval.all : 12;
+  const allInterval = interval.all ? interval.all : "12";
 
   return (
     <Element
@@ -41,19 +41,19 @@ export const Wrap: React.FC<Props> = ({
         background: var(--background-color);
         ${interval.top &&
         css`
-          padding-top: var(--interval-${interval.top};
+          padding-top: var(--interval-${interval.top});
         `}
         ${interval.right &&
         css`
-          padding-right: var(--interval-${interval.right};
+          padding-right: var(--interval-${interval.right});
         `}
         ${interval.bottom &&
         css`
-          padding-bottom: var(--interval-${interval.bottom};
+          padding-bottom: var(--interval-${interval.bottom});
         `}
         ${interval.left &&
         css`
-          padding-left: var(--interval-${interval.left};
+          padding-left: var(--interval-${interval.left});
         `}
         font-size: var(--font-size-${fontSize});
         line-height: var(--font-size-${lineHeight});

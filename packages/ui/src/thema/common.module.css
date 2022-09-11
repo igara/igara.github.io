@@ -1,5 +1,6 @@
 .commonVariables {
   /* interval */
+  --interval-auto: auto;
   --interval-0: 0;
   --interval-4: 4px;
   --interval-8: 8px;
