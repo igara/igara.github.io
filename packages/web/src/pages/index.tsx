@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { NextPage } from "next";
+import { Layout } from "@igara.github.io/ui";
 
 const Home: NextPage = () => {
   return (
@@ -13,6 +14,10 @@ const Home: NextPage = () => {
       <main>工事中</main>
     </div>
   );
+};
+
+Home.getLayout = (page) => {
+  return <Layout>{page}</Layout>;
 };
 
 export default Home;
