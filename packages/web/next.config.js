@@ -9,4 +9,7 @@ module.exports = withTM({
     // !! WARN !!
     ignoreBuildErrors: true,
   },
+  images: {
+    unoptimized: true,
+  },
 });
