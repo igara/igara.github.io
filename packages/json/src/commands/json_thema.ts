@@ -16,6 +16,12 @@ import { prettifyJSONStringify } from "src/utils";
       return match;
     });
 
+    const borderRadiuslMatch = commonCSS.match(/--border-radius-\S+:/g);
+    const borderRadius = borderRadiuslMatch.map((i) => {
+      const match = i.replace("--border-radius-", "").replace(":", "");
+      return match;
+    });
+
     const fontSizeMatch = commonCSS.match(/--font-size-.*:/g);
     const fontSizes = fontSizeMatch.map((i) => {
       const match = i.match(/[0-9]+/);
@@ -33,6 +39,15 @@ import { prettifyJSONStringify } from "src/utils";
       `export const Intervals = ${prettifyJSONStringify(intervals)} as const;
 
 export type IntervalType = typeof Intervals[number];
+`
+    );
+    writeFileSync(
+      "src/thema/border_radius.ts",
+      `export const BorderRadius = ${prettifyJSONStringify(
+        borderRadius
+      )} as const;
+
+export type BorderRadiusType = typeof BorderRadius[number];
 `
     );
     writeFileSync(
