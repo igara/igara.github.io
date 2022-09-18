@@ -21,6 +21,7 @@ export const getStaticProps = () => {
 };
 
 Blogs.getLayout = (page) => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { variables, themaName } = useThema();
 
   return (
