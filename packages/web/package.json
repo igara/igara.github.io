@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.18.10",
+    "@types/node": "18.7.14",
     "@types/react": "18.0.15",
     "eslint": "8.21.0",
     "eslint-config-next": "12.2.4",
