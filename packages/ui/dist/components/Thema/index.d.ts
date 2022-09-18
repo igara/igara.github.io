@@ -17,4 +17,5 @@ interface GithubMarkdownStyleProps {
 }
 export declare const GithubMarkdownStyle: React.FC<GithubMarkdownStyleProps>;
 export declare const ZennMarkdownStyle: React.FC;
+export declare const GlobalStyle: React.FC;
 export {};

@@ -125,3 +125,23 @@ export const ZennMarkdownStyle: React.FC = () => {
 
   return <style>{css}</style>;
 };
+
+export const GlobalStyle: React.FC = () => {
+  const [css, setCSS] = useState("");
+
+  useEffect(() => {
+    if (!css) {
+      setCSS(`html,
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+          Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        color: var(--font-color);
+        background: var(--background-color);
+      }`);
+    }
+  }, [css]);
+
+  return <style>{css}</style>;
+};

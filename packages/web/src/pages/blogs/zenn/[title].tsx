@@ -3,7 +3,7 @@ import NextHead from "next/head";
 
 import { BlogZennPage } from "src/components";
 import { zennArticleListJSON } from "@igara.github.io/json";
-import { ZennMarkdownStyle } from "@igara.github.io/ui";
+import { Layout, ZennMarkdownStyle } from "@igara.github.io/ui";
 
 const BlogZenn: NextPage<{
   title: string;
@@ -72,6 +72,10 @@ export const getStaticPaths = () => {
     paths: blogPaths,
     fallback: false,
   };
+};
+
+BlogZenn.getLayout = (page) => {
+  return <Layout>{page}</Layout>;
 };
 
 export default BlogZenn;

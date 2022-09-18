@@ -1,5 +1,5 @@
 import React from "react";
-import { IntervalType, FontSizeType, LineHeightType } from "@igara.github.io/json";
+import { IntervalType, FontSizeType, LineHeightType, BorderRadiusType } from "@igara.github.io/json";
 import * as CSS from "csstype";
 interface Props {
     children?: React.ReactNode;
@@ -15,6 +15,7 @@ interface Props {
     lineHeight?: LineHeightType;
     border?: boolean;
     borderStyle?: CSS.Property.BorderStyle;
+    borderRadius?: BorderRadiusType;
 }
 export declare const Wrap: React.FC<Props>;
 export {};

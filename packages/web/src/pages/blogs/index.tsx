@@ -3,6 +3,7 @@ import { NextPage } from "next";
 import { BlogsPage } from "src/components";
 
 import { AllJSON, allJSON } from "@igara.github.io/json";
+import { useThema, Thema, Wrap } from "@igara.github.io/ui";
 
 type Props = { blogs: AllJSON };
 
@@ -17,6 +18,16 @@ export const getStaticProps = () => {
     props: { blogs },
     revalidate: 1,
   };
+};
+
+Blogs.getLayout = (page) => {
+  const { variables, themaName } = useThema();
+
+  return (
+    <Thema variables={variables} themaName={themaName}>
+      <Wrap element="div">{page}</Wrap>
+    </Thema>
+  );
 };
 
 export default Blogs;

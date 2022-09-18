@@ -3,7 +3,7 @@ import NextHead from "next/head";
 
 import { BlogQiitaPage } from "src/components";
 import { qiitaListJSON } from "@igara.github.io/json";
-import { useThema, GithubMarkdownStyle } from "@igara.github.io/ui";
+import { useThema, GithubMarkdownStyle, Layout } from "@igara.github.io/ui";
 
 const BlogQiita: NextPage<{
   title: string;
@@ -74,6 +74,10 @@ export const getStaticPaths = () => {
     paths: blogPaths,
     fallback: false,
   };
+};
+
+BlogQiita.getLayout = (page) => {
+  return <Layout>{page}</Layout>;
 };
 
 export default BlogQiita;

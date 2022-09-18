@@ -1,14 +1,8 @@
-import "../styles/globals.css";
-import { useThema, Thema } from "@igara.github.io/ui";
+import type { AppPropsWithLayout } from "next/app";
 
-function MyApp({ Component, pageProps }) {
-  const { variables, themaName } = useThema();
-
-  return (
-    <Thema variables={variables} themaName={themaName}>
-      <Component {...pageProps} />
-    </Thema>
-  );
+function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+  const getLayout = Component.getLayout ?? ((page) => page);
+  return getLayout(<Component {...pageProps} />);
 }
 
 export default MyApp;

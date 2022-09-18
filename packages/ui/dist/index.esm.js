@@ -1,4 +1,4 @@
-import{useState as e,useCallback as z,useEffect as w}from"react";import{ThemeProvider as S,createTheme as M}from"@mui/material/styles";import C from"@mui/material/CssBaseline";import y from"classnames";var i="be9603a87e6c2e4fffb3860f346d18780b164680c0ee562304ca99194c8e26c8",g=`._commonVariables_r44v9_1 {
+import{useState as F,useCallback as X,useEffect as I}from"react";import{ThemeProvider as Y,createTheme as oo}from"@mui/material/styles";import So from"@mui/material/CssBaseline";import L from"classnames";var N="be9603a87e6c2e4fffb3860f346d18780b164680c0ee562304ca99194c8e26c8",O=`._commonVariables_fkjqp_1 {
   /* interval */
   --interval-auto: auto;
   --interval-0: 0;
@@ -11,6 +11,11 @@ import{useState as e,useCallback as z,useEffect as w}from"react";import{ThemePro
 
   /* border-size */
   --border-size: 2px;
+
+  /* border-radius */
+  --border-radius-8: 8px;
+  --border-radius-28: 28px;
+  --border-radius-50: 50%;
 
   /* font-size */
   --font-size-12: 12px;
@@ -25,19 +30,19 @@ import{useState as e,useCallback as z,useEffect as w}from"react";import{ThemePro
   --line-height-32: 32px;
   --line-height-48: 48px;
 }
-`;(function(){if(!(typeof document>"u")&&!document.getElementById(i)){var o=document.createElement("style");o.id=i,o.textContent=g,document.head.appendChild(o)}})();var r={commonVariables:"_commonVariables_r44v9_1"};var l="8a6478e32ed7292c4f20cd02ac186a32f919113778fca834343d521b5f4a926c",f=`._themaVariables_1flse_1 {
+`;(function(){if(!(typeof document>"u")&&!document.getElementById(N)){var o=document.createElement("style");o.id=N,o.textContent=O,document.head.appendChild(o)}})();var j={commonVariables:"_commonVariables_fkjqp_1"};var B="02b363665d53ce81a3e0a842b01d8024447f6f275b14b96b6b48a5729fb63fd2",Z=`._themaVariables_1flse_1 {
   --background-color: #202124;
   --font-color: #bdc1c6;
   --link-color: #8ab4f8;
   --border-color: #3c4043;
 }
-`;(function(){if(!(typeof document>"u")&&!document.getElementById(l)){var o=document.createElement("style");o.id=l,o.textContent=f,document.head.appendChild(o)}})();var m={themaVariables:"_themaVariables_1flse_1"};var b="9c8d0a53d807bcc4504fad150fe0c6b2aadcf299758e17305a42fa05f5384854",u=`._themaVariables_yhqdm_1 {
+`;(function(){if(!(typeof document>"u")&&!document.getElementById(B)){var o=document.createElement("style");o.id=B,o.textContent=Z,document.head.appendChild(o)}})();var E={themaVariables:"_themaVariables_1flse_1"};var _="4d9eed929de026f56810196b7a3a0174e22b21c19050b24d1326525c3cb77ba4",J=`._themaVariables_yhqdm_1 {
   --background-color: #bdc1c6;
   --font-color: #202124;
   --link-color: #8ab4f8;
   --border-color: #3c4043;
 }
-`;(function(){if(!(typeof document>"u")&&!document.getElementById(b)){var o=document.createElement("style");o.id=b,o.textContent=u,document.head.appendChild(o)}})();var c={themaVariables:"_themaVariables_yhqdm_1"};var k=`.markdown-body {
+`;(function(){if(!(typeof document>"u")&&!document.getElementById(_)){var o=document.createElement("style");o.id=_,o.textContent=J,document.head.appendChild(o)}})();var $={themaVariables:"_themaVariables_yhqdm_1"};var V=`.markdown-body {
   color-scheme: dark;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -978,7 +983,7 @@ import{useState as e,useCallback as z,useEffect as w}from"react";import{ThemePro
 .markdown-body ::-webkit-calendar-picker-indicator {
   filter: invert(50%);
 }
-`;var p=`.markdown-body {
+`;var q=`.markdown-body {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   margin: 0;
@@ -1918,8 +1923,38 @@ import{useState as e,useCallback as z,useEffect as w}from"react";import{ThemePro
 .markdown-body ::-webkit-calendar-picker-indicator {
   filter: invert(50%);
 }
-`;var s=["dark","light"],T=o=>{typeof window<"u"&&window.localStorage&&s.includes(o)&&window.localStorage.setItem("thema",o)},j=()=>{let o;if(typeof window<"u"&&window.localStorage){let d=window.localStorage.getItem("thema");s.includes(d)&&(o=d)}return o||(o="dark"),o},D=()=>{let o=j(),[d,n]=e(o),a=z(t=>{T(t),n(t)},[n]),h=d==="dark"?y(r.commonVariables,m.themaVariables):y(r.commonVariables,c.themaVariables);return{setThema:a,themaName:d,variables:h}},Z=({children:o,variables:d,themaName:n})=>{let a=M({palette:{mode:n}});return<div className={d}><S theme={a}><C/>{o}</S></div>},J=({themaName:o})=>{let[d,n]=e("");return w(()=>{d||n(o==="dark"?k:p)},[d]),<style>{d}</style>},K=()=>{let[o,d]=e("");return w(()=>{o||d(`.znc {
+`;var P=["dark","light"],Co=o=>{typeof window<"u"&&window.localStorage&&P.includes(o)&&window.localStorage.setItem("thema",o)},To=()=>{let o;if(typeof window<"u"&&window.localStorage){let S=window.localStorage.getItem("thema");P.includes(S)&&(o=S)}return o||(o="dark"),o},U=()=>{let o=To(),[S,d]=F(o),T=X(M=>{Co(M),d(M)},[d]),R=S==="dark"?L(j.commonVariables,E.themaVariables):L(j.commonVariables,$.themaVariables);return{setThema:T,themaName:S,variables:R}},A=({children:o,variables:S,themaName:d})=>{let T=oo({palette:{mode:d}});return<div className={S}><Y theme={T}><So/>{o}</Y></div>},Ao=({themaName:o})=>{let[S,d]=F("");return I(()=>{S||d(o==="dark"?V:q)},[S]),<style>{S}</style>},Ho=()=>{let[o,S]=F("");return I(()=>{o||S(`.znc {
         color: var(--font-color);
         background: var(--background-color);
         border: var(--border-color) var(--border-size) solid;
-      }`)},[o]),<style>{o}</style>};export{J as GithubMarkdownStyle,Z as Thema,K as ZennMarkdownStyle,D as useThema};
+      }`)},[o]),<style>{o}</style>},Go=()=>{let[o,S]=F("");return I(()=>{o||S(`html,
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+          Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        color: var(--font-color);
+        background: var(--background-color);
+      }`)},[o]),<style>{o}</style>};import{css as C}from"@emotion/react";var H=({children:o,element:S="span",interval:d={},fontSize:T="12",lineHeight:R="16",border:M=!1,borderStyle:G="solid",borderRadius:W="8"})=>{let D=d.all?d.all:"12";return<S css={C`
+        padding: var(--interval-${D});
+        background: var(--background-color);
+        ${d.top&&C`
+          padding-top: var(--interval-${d.top});
+        `}
+        ${d.right&&C`
+          padding-right: var(--interval-${d.right});
+        `}
+        ${d.bottom&&C`
+          padding-bottom: var(--interval-${d.bottom});
+        `}
+        ${d.left&&C`
+          padding-left: var(--interval-${d.left});
+        `}
+        font-size: var(--font-size-${T});
+        line-height: var(--font-size-${R});
+        color: var(--font-color);
+        ${M&&C`
+          border: var(--border-color) var(--border-size) ${G};
+          border-radius: var(--border-radius-${W});
+        `}
+      `}>{o}</S>};var Jo=({children:o})=>{let{variables:S,themaName:d}=U();return<A variables={S}themaName={d}><H element="div">{o}</H></A>};export{Ao as GithubMarkdownStyle,Go as GlobalStyle,Jo as Layout,A as Thema,H as Wrap,Ho as ZennMarkdownStyle,U as useThema};
