@@ -4,6 +4,7 @@ import {
   IntervalType,
   FontSizeType,
   LineHeightType,
+  BorderRadiusType,
 } from "@igara.github.io/json";
 import * as CSS from "csstype";
 
@@ -21,6 +22,7 @@ interface Props {
   lineHeight?: LineHeightType;
   border?: boolean;
   borderStyle?: CSS.Property.BorderStyle;
+  borderRadius?: BorderRadiusType;
 }
 
 export const Wrap: React.FC<Props> = ({
@@ -31,6 +33,7 @@ export const Wrap: React.FC<Props> = ({
   lineHeight = "16",
   border = false,
   borderStyle = "solid",
+  borderRadius = "8",
 }) => {
   const allInterval = interval.all ? interval.all : "12";
 
@@ -61,6 +64,7 @@ export const Wrap: React.FC<Props> = ({
         ${border &&
         css`
           border: var(--border-color) var(--border-size) ${borderStyle};
+          border-radius: var(--border-radius-${borderRadius});
         `}
       `}
     >
