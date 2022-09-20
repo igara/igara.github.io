@@ -1,13 +1,35 @@
 import { NextPage } from "next";
-import Link from "next/link";
 import Image from "next/image";
 import { AllJSON } from "@igara.github.io/json";
+import { css } from "@emotion/react";
+import React from "react";
+import { useRouter } from "next/router";
 
 type Props = { blogs: AllJSON };
 
 export const BlogsPage: NextPage<Props> = ({ blogs }) => {
+  const router = useRouter();
+
+  const onClickLink = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const linkElement = e.target as HTMLAnchorElement;
+    const href = linkElement.href;
+
+    if (window === window.parent) {
+      router.push(href);
+    } else {
+      // iframe
+      window.parent.postMessage(
+        {
+          href,
+        },
+        "*"
+      );
+    }
+  };
+
   return (
-    <div>
+    <div css={blogsCSS}>
       {blogs.map((blog) => (
         <div key={blog.link}>
           <Image
@@ -18,7 +40,9 @@ export const BlogsPage: NextPage<Props> = ({ blogs }) => {
           />
           <div>
             <div>
-              <Link href={blog.link}>{blog.title}</Link>
+              <a href={blog.link} onClick={onClickLink}>
+                {blog.title}
+              </a>
             </div>
             <div>{blog.description}...</div>
             <div>publish: {blog.publishedAt}</div>
@@ -28,3 +52,7 @@ export const BlogsPage: NextPage<Props> = ({ blogs }) => {
     </div>
   );
 };
+
+const blogsCSS = css`
+  overflow-x: hidden;
+`;
