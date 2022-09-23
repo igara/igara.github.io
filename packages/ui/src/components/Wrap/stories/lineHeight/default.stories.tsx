@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
-import { useThema, Thema } from "../../../../components/Thema";
-import { Wrap } from "../../";
+import { useThema, Thema } from "../../../Thema";
+import { Wrap } from "../..";
 
 const Component = () => {
   const { themaName, variables } = useThema();
@@ -14,7 +14,7 @@ const Component = () => {
 };
 
 const Meta: ComponentMeta<typeof Component> = {
-  title: "components/Wrap/interval",
+  title: "components/Wrap/lineHeight",
   component: Component,
 };
 
@@ -24,14 +24,14 @@ export const Default: ComponentStoryObj<typeof Component> = {
   play: async () => {},
 };
 
-export const _all_16: ComponentStoryObj<typeof Component> = {
+export const _lineHeight_0: ComponentStoryObj<typeof Component> = {
   render: () => {
     const TestComponent = () => {
       const { themaName, variables } = useThema();
 
       return (
         <Thema variables={variables} themaName={themaName}>
-          <Wrap interval={{ all: "16" }}>Wrap</Wrap>
+          <Wrap lineHeight="0">Wrap</Wrap>
         </Thema>
       );
     };
@@ -40,14 +40,14 @@ export const _all_16: ComponentStoryObj<typeof Component> = {
   },
 };
 
-export const _all_24: ComponentStoryObj<typeof Component> = {
+export const _lineHeight_16: ComponentStoryObj<typeof Component> = {
   render: () => {
     const TestComponent = () => {
       const { themaName, variables } = useThema();
 
       return (
         <Thema variables={variables} themaName={themaName}>
-          <Wrap interval={{ all: "24" }}>Wrap</Wrap>
+          <Wrap lineHeight="16">Wrap</Wrap>
         </Thema>
       );
     };
@@ -56,14 +56,14 @@ export const _all_24: ComponentStoryObj<typeof Component> = {
   },
 };
 
-export const _all_32: ComponentStoryObj<typeof Component> = {
+export const _lineHeight_24: ComponentStoryObj<typeof Component> = {
   render: () => {
     const TestComponent = () => {
       const { themaName, variables } = useThema();
 
       return (
         <Thema variables={variables} themaName={themaName}>
-          <Wrap interval={{ all: "32" }}>Wrap</Wrap>
+          <Wrap lineHeight="24">Wrap</Wrap>
         </Thema>
       );
     };
@@ -72,14 +72,30 @@ export const _all_32: ComponentStoryObj<typeof Component> = {
   },
 };
 
-export const _top_0: ComponentStoryObj<typeof Component> = {
+export const _lineHeight_32: ComponentStoryObj<typeof Component> = {
   render: () => {
     const TestComponent = () => {
       const { themaName, variables } = useThema();
 
       return (
         <Thema variables={variables} themaName={themaName}>
-          <Wrap interval={{ all: "32", top: "0" }}>Wrap</Wrap>
+          <Wrap lineHeight="32">Wrap</Wrap>
+        </Thema>
+      );
+    };
+
+    return <TestComponent />;
+  },
+};
+
+export const _lineHeight_48: ComponentStoryObj<typeof Component> = {
+  render: () => {
+    const TestComponent = () => {
+      const { themaName, variables } = useThema();
+
+      return (
+        <Thema variables={variables} themaName={themaName}>
+          <Wrap lineHeight="48">Wrap</Wrap>
         </Thema>
       );
     };

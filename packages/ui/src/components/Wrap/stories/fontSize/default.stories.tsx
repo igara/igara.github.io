@@ -14,7 +14,7 @@ const Component = () => {
 };
 
 const Meta: ComponentMeta<typeof Component> = {
-  title: "components/Wrap/interval",
+  title: "components/Wrap/fontSize",
   component: Component,
 };
 
@@ -24,14 +24,14 @@ export const Default: ComponentStoryObj<typeof Component> = {
   play: async () => {},
 };
 
-export const _all_16: ComponentStoryObj<typeof Component> = {
+export const _fontSize_12: ComponentStoryObj<typeof Component> = {
   render: () => {
     const TestComponent = () => {
       const { themaName, variables } = useThema();
 
       return (
         <Thema variables={variables} themaName={themaName}>
-          <Wrap interval={{ all: "16" }}>Wrap</Wrap>
+          <Wrap fontSize="12">Wrap</Wrap>
         </Thema>
       );
     };
@@ -40,14 +40,14 @@ export const _all_16: ComponentStoryObj<typeof Component> = {
   },
 };
 
-export const _all_24: ComponentStoryObj<typeof Component> = {
+export const _fontSize_16: ComponentStoryObj<typeof Component> = {
   render: () => {
     const TestComponent = () => {
       const { themaName, variables } = useThema();
 
       return (
         <Thema variables={variables} themaName={themaName}>
-          <Wrap interval={{ all: "24" }}>Wrap</Wrap>
+          <Wrap fontSize="16">Wrap</Wrap>
         </Thema>
       );
     };
@@ -56,14 +56,14 @@ export const _all_24: ComponentStoryObj<typeof Component> = {
   },
 };
 
-export const _all_32: ComponentStoryObj<typeof Component> = {
+export const _fontSize_24: ComponentStoryObj<typeof Component> = {
   render: () => {
     const TestComponent = () => {
       const { themaName, variables } = useThema();
 
       return (
         <Thema variables={variables} themaName={themaName}>
-          <Wrap interval={{ all: "32" }}>Wrap</Wrap>
+          <Wrap fontSize="24">Wrap</Wrap>
         </Thema>
       );
     };
@@ -72,14 +72,14 @@ export const _all_32: ComponentStoryObj<typeof Component> = {
   },
 };
 
-export const _top_0: ComponentStoryObj<typeof Component> = {
+export const _fontSize_32: ComponentStoryObj<typeof Component> = {
   render: () => {
     const TestComponent = () => {
       const { themaName, variables } = useThema();
 
       return (
         <Thema variables={variables} themaName={themaName}>
-          <Wrap interval={{ all: "32", top: "0" }}>Wrap</Wrap>
+          <Wrap fontSize="32">Wrap</Wrap>
         </Thema>
       );
     };

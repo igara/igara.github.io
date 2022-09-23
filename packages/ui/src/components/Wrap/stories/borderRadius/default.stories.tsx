@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
-import { useThema, Thema } from "../../../../components/Thema";
-import { Wrap } from "../../";
+import { useThema, Thema } from "../../../Thema";
+import { Wrap } from "../..";
 
 const Component = () => {
   const { themaName, variables } = useThema();
@@ -14,24 +14,20 @@ const Component = () => {
 };
 
 const Meta: ComponentMeta<typeof Component> = {
-  title: "components/Wrap/interval",
+  title: "components/Wrap/borderRadius",
   component: Component,
 };
 
 export default Meta;
 
 export const Default: ComponentStoryObj<typeof Component> = {
-  play: async () => {},
-};
-
-export const _all_16: ComponentStoryObj<typeof Component> = {
   render: () => {
     const TestComponent = () => {
       const { themaName, variables } = useThema();
 
       return (
         <Thema variables={variables} themaName={themaName}>
-          <Wrap interval={{ all: "16" }}>Wrap</Wrap>
+          <Wrap border>Wrap</Wrap>
         </Thema>
       );
     };
@@ -40,14 +36,16 @@ export const _all_16: ComponentStoryObj<typeof Component> = {
   },
 };
 
-export const _all_24: ComponentStoryObj<typeof Component> = {
+export const _borderRadius_8: ComponentStoryObj<typeof Component> = {
   render: () => {
     const TestComponent = () => {
       const { themaName, variables } = useThema();
 
       return (
         <Thema variables={variables} themaName={themaName}>
-          <Wrap interval={{ all: "24" }}>Wrap</Wrap>
+          <Wrap border borderRadius="8">
+            Wrap
+          </Wrap>
         </Thema>
       );
     };
@@ -56,14 +54,16 @@ export const _all_24: ComponentStoryObj<typeof Component> = {
   },
 };
 
-export const _all_32: ComponentStoryObj<typeof Component> = {
+export const _borderRadius_28: ComponentStoryObj<typeof Component> = {
   render: () => {
     const TestComponent = () => {
       const { themaName, variables } = useThema();
 
       return (
         <Thema variables={variables} themaName={themaName}>
-          <Wrap interval={{ all: "32" }}>Wrap</Wrap>
+          <Wrap border borderRadius="28">
+            Wrap
+          </Wrap>
         </Thema>
       );
     };
@@ -72,14 +72,16 @@ export const _all_32: ComponentStoryObj<typeof Component> = {
   },
 };
 
-export const _top_0: ComponentStoryObj<typeof Component> = {
+export const _borderRadius_50: ComponentStoryObj<typeof Component> = {
   render: () => {
     const TestComponent = () => {
       const { themaName, variables } = useThema();
 
       return (
         <Thema variables={variables} themaName={themaName}>
-          <Wrap interval={{ all: "32", top: "0" }}>Wrap</Wrap>
+          <Wrap border borderRadius="50">
+            Wrap
+          </Wrap>
         </Thema>
       );
     };
