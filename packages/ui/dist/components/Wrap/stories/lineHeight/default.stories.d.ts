@@ -1,0 +1,10 @@
+import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
+declare const Component: () => import("@emotion/react/types/jsx-namespace").EmotionJSX.Element;
+declare const Meta: ComponentMeta<typeof Component>;
+export default Meta;
+export declare const Default: ComponentStoryObj<typeof Component>;
+export declare const _lineHeight_0: ComponentStoryObj<typeof Component>;
+export declare const _lineHeight_16: ComponentStoryObj<typeof Component>;
+export declare const _lineHeight_24: ComponentStoryObj<typeof Component>;
+export declare const _lineHeight_32: ComponentStoryObj<typeof Component>;
+export declare const _lineHeight_48: ComponentStoryObj<typeof Component>;

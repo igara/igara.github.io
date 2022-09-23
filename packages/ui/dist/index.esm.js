@@ -30,13 +30,13 @@ import{useState as F,useCallback as X,useEffect as I}from"react";import{ThemePro
   --line-height-32: 32px;
   --line-height-48: 48px;
 }
-`;(function(){if(!(typeof document>"u")&&!document.getElementById(N)){var o=document.createElement("style");o.id=N,o.textContent=O,document.head.appendChild(o)}})();var j={commonVariables:"_commonVariables_fkjqp_1"};var B="02b363665d53ce81a3e0a842b01d8024447f6f275b14b96b6b48a5729fb63fd2",Z=`._themaVariables_1flse_1 {
+`;(function(){if(!(typeof document>"u")&&!document.getElementById(N)){var o=document.createElement("style");o.id=N,o.textContent=O,document.head.appendChild(o)}})();var j={commonVariables:"_commonVariables_fkjqp_1"};var B="8a6478e32ed7292c4f20cd02ac186a32f919113778fca834343d521b5f4a926c",Z=`._themaVariables_1flse_1 {
   --background-color: #202124;
   --font-color: #bdc1c6;
   --link-color: #8ab4f8;
   --border-color: #3c4043;
 }
-`;(function(){if(!(typeof document>"u")&&!document.getElementById(B)){var o=document.createElement("style");o.id=B,o.textContent=Z,document.head.appendChild(o)}})();var E={themaVariables:"_themaVariables_1flse_1"};var _="4d9eed929de026f56810196b7a3a0174e22b21c19050b24d1326525c3cb77ba4",J=`._themaVariables_yhqdm_1 {
+`;(function(){if(!(typeof document>"u")&&!document.getElementById(B)){var o=document.createElement("style");o.id=B,o.textContent=Z,document.head.appendChild(o)}})();var E={themaVariables:"_themaVariables_1flse_1"};var _="9c8d0a53d807bcc4504fad150fe0c6b2aadcf299758e17305a42fa05f5384854",J=`._themaVariables_yhqdm_1 {
   --background-color: #bdc1c6;
   --font-color: #202124;
   --link-color: #8ab4f8;
@@ -1957,4 +1957,4 @@ import{useState as F,useCallback as X,useEffect as I}from"react";import{ThemePro
           border: var(--border-color) var(--border-size) ${G};
           border-radius: var(--border-radius-${W});
         `}
-      `}>{o}</S>};var Jo=({children:o})=>{let{variables:S,themaName:d}=U();return<A variables={S}themaName={d}><H element="div">{o}</H></A>};export{Ao as GithubMarkdownStyle,Go as GlobalStyle,Jo as Layout,A as Thema,H as Wrap,Ho as ZennMarkdownStyle,U as useThema};
+      `}>{o}</S>};var Jo=({children:o})=>{let{variables:S,themaName:d}=U();return<A variables={S}themaName={d}><H element="div">{o}</H></A>};import{Input as Yo}from"@mui/material";export{Ao as GithubMarkdownStyle,Go as GlobalStyle,Yo as Input,Jo as Layout,A as Thema,H as Wrap,Ho as ZennMarkdownStyle,U as useThema};

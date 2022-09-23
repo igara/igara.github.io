@@ -3,7 +3,4 @@ declare const Component: () => import("@emotion/react/types/jsx-namespace").Emot
 declare const Meta: ComponentMeta<typeof Component>;
 export default Meta;
 export declare const Default: ComponentStoryObj<typeof Component>;
-export declare const _all_16: ComponentStoryObj<typeof Component>;
-export declare const _all_24: ComponentStoryObj<typeof Component>;
-export declare const _all_32: ComponentStoryObj<typeof Component>;
-export declare const _top_0: ComponentStoryObj<typeof Component>;
+export declare const _border: ComponentStoryObj<typeof Component>;
