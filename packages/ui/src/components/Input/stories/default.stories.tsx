@@ -2,12 +2,17 @@ import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
 import { useThema, Thema } from "../../../components/Thema";
 import { Wrap } from "../../../components/Wrap";
+import { Input } from "../";
 
 const Component = () => {
   const { themaName, variables } = useThema();
   return (
     <Thema variables={variables} themaName={themaName}>
-      <Wrap>{`export {Input} from "@mui/material";`}</Wrap>
+      <Wrap element="div">
+        {`export {Input} from "@mui/material";`}
+        <br />
+        <Input />
+      </Wrap>
     </Thema>
   );
 };
