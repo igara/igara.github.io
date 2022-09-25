@@ -24,11 +24,13 @@ importers:
       csstype: 3.1.0
       jest: 28.1.3
       jest-specific-snapshot: 5.0.0
+      next: 12.3.0
       prettier: 2.7.1
       raw-loader: 4.0.2
       react: 18.2.0
       react-dom: 18.2.0
       require-from-string: 2.0.2
+      storybook-addon-next-router: 4.0.0
       storybook-css-modules: 1.0.8
       stylelint: 14.11.0
       stylelint-config-prettier: 9.0.3
@@ -58,11 +60,13 @@ importers:
       csstype: 3.1.0
       jest: 28.1.3
       jest-specific-snapshot: 5.0.0_jest@28.1.3
+      next: 12.3.0_twoewwu6sg7cdf3ao6njtbftne
       prettier: 2.7.1
       raw-loader: 4.0.2_webpack@5.74.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       require-from-string: 2.0.2
+      storybook-addon-next-router: 4.0.0_zghey65tcuwvk2ya52xzzrj57y
       storybook-css-modules: 1.0.8
       stylelint: 14.11.0
       stylelint-config-prettier: 9.0.3_stylelint@14.11.0
@@ -13429,6 +13433,25 @@ packages:
 
   /store2/2.14.2:
     resolution: {integrity: sha512-siT1RiqlfQnGqgT/YzXVUNsom9S0H1OX+dpdGN1xkyYATo4I6sep5NmsRD/40s3IIOvlCq6akxkqG82urIZW1w==}
+    dev: false
+
+  /storybook-addon-next-router/4.0.0_zghey65tcuwvk2ya52xzzrj57y:
+    resolution: {integrity: sha512-zaEo/RI9IXzxlaiWeFBMBkjxYabLZGFibD82xH9AcKYcN/5yZq7VKo+NckMuTVu2WBaCUR4jA/O+ftcrQEvvfA==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      '@storybook/addon-actions': ^6.0.0
+      '@storybook/addons': ^6.0.0
+      '@storybook/client-api': ^6.0.0
+      next: ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@storybook/addon-actions': 6.5.10_biqbaboplfbrettd7655fr4n2y
+      '@storybook/addons': 6.5.10_biqbaboplfbrettd7655fr4n2y
+      next: 12.3.0_twoewwu6sg7cdf3ao6njtbftne
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      tslib: 2.4.0
     dev: false
 
   /storybook-css-modules/1.0.8:

@@ -1,14 +1,32 @@
 import { NextPage } from "next";
 import Image from "next/image";
 import { AllJSON } from "@igara.github.io/json";
+import { Input } from "@igara.github.io/ui";
 import { css } from "@emotion/react";
-import React from "react";
+import React, { useState, useCallback } from "react";
 import { useRouter } from "next/router";
 
 type Props = { blogs: AllJSON };
 
 export const BlogsPage: NextPage<Props> = ({ blogs }) => {
   const router = useRouter();
+  const search = router.query.search ? router.query.search.toString() : "";
+  const [searchWord, setSearchWord] = useState(search);
+
+  const filterBlogs = searchWord
+    ? blogs.filter((b) => {
+        const blogText = JSON.stringify(b);
+        const reg = new RegExp(searchWord);
+        return reg.test(blogText);
+      })
+    : blogs;
+
+  const onChangeSearhWord = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      setSearchWord(e.target.value);
+    },
+    [setSearchWord]
+  );
 
   const onClickLink = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
@@ -30,7 +48,13 @@ export const BlogsPage: NextPage<Props> = ({ blogs }) => {
 
   return (
     <div css={blogsCSS}>
-      {blogs.map((blog) => (
+      <Input
+        placeholder="search word..."
+        defaultValue={searchWord}
+        onChange={onChangeSearhWord}
+      />
+
+      {filterBlogs.map((blog) => (
         <div key={blog.link}>
           <Image
             src={blog.ogp.small}
