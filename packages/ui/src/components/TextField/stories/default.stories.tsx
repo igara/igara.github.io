@@ -1,24 +1,24 @@
 import { ComponentMeta, ComponentStoryObj } from "@storybook/react";
 
-import { useThema, Thema } from "../../../components/Thema";
-import { Wrap } from "../../../components/Wrap";
-import { Input } from "../";
+import { useThema, Thema } from "../../Thema";
+import { Wrap } from "../../Wrap";
+import { TextField } from "..";
 
 const Component = () => {
   const { themaName, variables } = useThema();
   return (
     <Thema variables={variables} themaName={themaName}>
       <Wrap element="div">
-        {`export {Input} from "@mui/material";`}
+        {`export {TextField} from "@mui/material";`}
         <br />
-        <Input />
+        <TextField />
       </Wrap>
     </Thema>
   );
 };
 
 const Meta: ComponentMeta<typeof Component> = {
-  title: "components/Input",
+  title: "components/TextField",
   component: Component,
 };
 

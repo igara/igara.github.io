@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import Image from "next/image";
 import { AllJSON } from "@igara.github.io/json";
-import { Input } from "@igara.github.io/ui";
+import { TextField } from "@igara.github.io/ui";
 import { css } from "@emotion/react";
 import React, { useState, useCallback } from "react";
 import { useRouter } from "next/router";
@@ -48,8 +48,8 @@ export const BlogsPage: NextPage<Props> = ({ blogs }) => {
 
   return (
     <div css={blogsCSS}>
-      <Input
-        placeholder="search word..."
+      <TextField
+        label="search word"
         defaultValue={searchWord}
         onChange={onChangeSearhWord}
       />
