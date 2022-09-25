@@ -4,6 +4,14 @@ import { GlobalStyle } from "@igara.github.io/ui";
 
 export default class MyDocument extends NextDocument {
   render() {
+    const ga = `
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag("js", new Date());
+gtag("config", "${process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID}"); `;
+
     return (
       <Html>
         <Head>
@@ -13,6 +21,16 @@ export default class MyDocument extends NextDocument {
             rel="stylesheet"
           />
           <GlobalStyle />
+
+          {process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID && (
+            <>
+              <script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID}`}
+              ></script>
+              <script dangerouslySetInnerHTML={{ __html: ga }}></script>
+            </>
+          )}
         </Head>
         <body>
           <Main />
