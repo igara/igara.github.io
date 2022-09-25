@@ -1,0 +1,18 @@
+<script async="" src=""></script>
+
+<script>
+  if (!/localhost/.test(location.host)) {
+    const GOOGLE_TAG_ID = "G-ESY273DTT5";
+    const head = document.getElementsByTagName("head")[0];
+    const script = document.createElement("script");
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}`;
+    head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", GOOGLE_TAG_ID);
+  }
+</script>
