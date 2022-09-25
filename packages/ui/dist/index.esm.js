@@ -1,4 +1,4 @@
-import{useState as F,useCallback as X,useEffect as I}from"react";import{ThemeProvider as Y,createTheme as oo}from"@mui/material/styles";import So from"@mui/material/CssBaseline";import L from"classnames";var N="be9603a87e6c2e4fffb3860f346d18780b164680c0ee562304ca99194c8e26c8",O=`._commonVariables_fkjqp_1 {
+import{useState as F,useCallback as X,useEffect as I}from"react";import{ThemeProvider as Y,createTheme as oo}from"@mui/material/styles";import So from"@mui/material/CssBaseline";import L from"classnames";var N="1cb4d321f1689a576f673fdae8d73da118c66622bd7a0c5b124c1101cc4612ed",O=`._commonVariables_fkjqp_1 {
   /* interval */
   --interval-auto: auto;
   --interval-0: 0;
