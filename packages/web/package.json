@@ -11,6 +11,7 @@
     "@emotion/react": "11.10.4",
     "@igara.github.io/json": "../json",
     "@igara.github.io/ui": "../ui",
+    "@react-hook/event": "1.2.6",
     "classnames": "2.3.1",
     "cross-env": "7.0.3",
     "csstype": "3.1.0",

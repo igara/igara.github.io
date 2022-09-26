@@ -7,6 +7,7 @@ importers:
       '@babel/core': 7.18.10
       '@emotion/babel-preset-css-prop': 11.10.0
       '@igara.github.io/stylelint-plugin-thema-rule': ./packages/stylelint-plugin-thema-rule
+      '@react-hook/event': 1.2.6
       '@storybook/addon-actions': 6.5.10
       '@storybook/addon-essentials': 6.5.10
       '@storybook/addon-interactions': 6.5.10
@@ -44,6 +45,7 @@ importers:
       '@babel/core': 7.18.10
       '@emotion/babel-preset-css-prop': 11.10.0_@babel+core@7.18.10
       '@igara.github.io/stylelint-plugin-thema-rule': link:packages/stylelint-plugin-thema-rule
+      '@react-hook/event': 1.2.6_react@18.2.0
       '@storybook/addon-actions': 6.5.10_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-essentials': 6.5.10_ohnyoiqw5c3ezouth7dxwz74mu
       '@storybook/addon-interactions': 6.5.10_jttgo2wwvppil2em44w5eksf2i
@@ -168,6 +170,7 @@ importers:
       '@emotion/react': 11.10.4
       '@igara.github.io/json': ../json
       '@igara.github.io/ui': ../ui
+      '@react-hook/event': 1.2.6
       '@types/node': 18.7.14
       '@types/react': 18.0.15
       classnames: 2.3.1
@@ -187,6 +190,7 @@ importers:
       '@emotion/react': 11.10.4_dekd3qhq25os2zmp2sxj6oaoou
       '@igara.github.io/json': link:../json
       '@igara.github.io/ui': link:../ui
+      '@react-hook/event': 1.2.6_react@18.2.0
       classnames: 2.3.1
       cross-env: 7.0.3
       csstype: 3.1.0
@@ -2999,6 +3003,14 @@ packages:
 
   /@popperjs/core/2.11.6:
     resolution: {integrity: sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==}
+    dev: false
+
+  /@react-hook/event/1.2.6_react@18.2.0:
+    resolution: {integrity: sha512-JUL5IluaOdn5w5Afpe/puPa1rj8X6udMlQ9dt4hvMuKmTrBS1Ya6sb4sVgvfe2eU4yDuOfAhik8xhbcCekbg9Q==}
+    peerDependencies:
+      react: '>=16.8'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /@rushstack/eslint-patch/1.1.4:

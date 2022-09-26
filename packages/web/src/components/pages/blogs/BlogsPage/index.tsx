@@ -3,7 +3,7 @@ import Image from "next/image";
 import { AllJSON } from "@igara.github.io/json";
 import { TextField, Wrap } from "@igara.github.io/ui";
 import { css } from "@emotion/react";
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { useRouter } from "next/router";
 
 type Props = { blogs: AllJSON };
@@ -11,7 +11,7 @@ type Props = { blogs: AllJSON };
 export const BlogsPage: NextPage<Props> = ({ blogs }) => {
   const router = useRouter();
   const search = router.query.search ? router.query.search.toString() : "";
-  const [searchWord, setSearchWord] = useState(search);
+  const [searchWord, setSearchWord] = useState("");
 
   const filterBlogs = searchWord
     ? blogs.filter((b) => {
@@ -46,15 +46,23 @@ export const BlogsPage: NextPage<Props> = ({ blogs }) => {
     }
   };
 
+  useEffect(() => {
+    if (!searchWord && search) {
+      setSearchWord(search);
+    }
+  }, [search, searchWord]);
+
   return (
     <div css={blogsCSS}>
-      <Wrap element="div" interval={{ left: "0" }}>
-        <TextField
-          label="search word"
-          defaultValue={searchWord}
-          onChange={onChangeSearhWord}
-        />
-      </Wrap>
+      {!search && (
+        <Wrap element="div" interval={{ left: "0" }}>
+          <TextField
+            label="search word"
+            defaultValue={searchWord ? search : searchWord}
+            onChange={onChangeSearhWord}
+          />
+        </Wrap>
+      )}
 
       {filterBlogs.map((blog) => (
         <div key={blog.link}>
