@@ -16,7 +16,7 @@ export const BlogsPage: NextPage<Props> = ({ blogs }) => {
   const filterBlogs = searchWord
     ? blogs.filter((b) => {
         const blogText = JSON.stringify(b);
-        const reg = new RegExp(searchWord);
+        const reg = new RegExp(searchWord, "i");
         return reg.test(blogText);
       })
     : blogs;
