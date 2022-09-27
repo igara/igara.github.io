@@ -17,6 +17,7 @@ import domParser from "dom-parser";
 import { writeFileSync, mkdirSync, readFileSync } from "fs";
 import dayjs from "dayjs";
 import SHA256 from "crypto-js/sha256";
+import RSS from "rss";
 
 const DOM = new domParser();
 
@@ -416,6 +417,25 @@ const createZennOGP = async (browser: puppeteer.Browser, ogpHTML: string) => {
       "src/api/blogs/json/all.json",
       prettifyJSONStringify(allJSON)
     );
+
+    const feed = new RSS({
+      title: "igara.github.io",
+      description: "RSS Feed",
+      site_url: "https://igara.github.io/blogs",
+      feed_url: "https://igara.github.io/feed.xml",
+      language: "ja",
+    });
+    allJSON.forEach((post, i) => {
+      if (i > 4) return;
+      feed.item({
+        title: post.title,
+        description: post.description,
+        date: new Date(post.publishedAt),
+        url: `https://igara.github.io${post.link}`,
+      });
+    });
+
+    writeFileSync(`../web/public/feed.xml`, feed.xml());
   } catch (e) {
     console.log(e);
   }
