@@ -31,6 +31,12 @@ gtag("config", "${process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID}"); `;
               <script dangerouslySetInnerHTML={{ __html: ga }}></script>
             </>
           )}
+          <link
+            rel="alternate"
+            type="application/atom+xml"
+            title="igara.github.io"
+            href="/feed.xml"
+          ></link>
         </Head>
         <body>
           <Main />
