@@ -41,6 +41,7 @@ import { writeFileSync, readFileSync } from "fs";
         link,
         description: post.description,
         date: new Date(`${yearMonthDay} ${hourMinuteSecond}`),
+        image: `https://igara.github.io${post.ogp.large}`,
       });
     });
 
