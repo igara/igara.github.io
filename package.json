@@ -10,6 +10,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o ./build-storybook && node -e \"fs.cpSync(\\\"./build-storybook\\\", \\\"./packages/web/public/storybook\\\", {recursive: true})\"",
     "json:api": "(cd packages/json && pnpm run json:api)",
+    "json:feed": "(cd packages/json && pnpm run json:feed)",
     "json:thema": "(cd packages/json && pnpm run json:thema)",
     "json:build": "(cd packages/json && pnpm run build)",
     "json:types": "(cd packages/json && pnpm run build:types)",

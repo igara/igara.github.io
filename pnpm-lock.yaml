@@ -85,7 +85,6 @@ importers:
       '@igara.github.io/ui': ../ui
       '@igara.github.io/web': ../web
       '@types/node': 18.7.14
-      '@types/rss': 0.0.29
       cross-env: 7.0.3
       crypto-js: 4.1.1
       dayjs: 1.11.4
@@ -94,9 +93,9 @@ importers:
       esbuild-register: 3.3.3
       eslint: 8.21.0
       eslint-config-next: 12.2.4
+      feed: 4.2.2
       next: 12.3.0
       puppeteer: 16.1.0
-      rss: 1.2.2
       typescript: 4.8.3
     dependencies:
       '@igara.github.io/ui': link:../ui
@@ -107,12 +106,11 @@ importers:
       dom-parser: 0.1.6
       esbuild: 0.15.1
       esbuild-register: 3.3.3_esbuild@0.15.1
+      feed: 4.2.2
       next: 12.3.0
       puppeteer: 16.1.0
-      rss: 1.2.2
     devDependencies:
       '@types/node': 18.7.14
-      '@types/rss': 0.0.29
       eslint: 8.21.0
       eslint-config-next: 12.2.4_iopuwovpd3qd4ttrbpmiexfkga
       typescript: 4.8.3
@@ -4709,10 +4707,6 @@ packages:
       '@types/scheduler': 0.16.2
       csstype: 3.1.0
 
-  /@types/rss/0.0.29:
-    resolution: {integrity: sha512-9hAYKyOcoxWqkJMue6bi0fcNXxjJiRutVvqyImy732LmTCxRz9BYPmSmujG7uddK0ZEP/35K3QVZ0sfAVyPnQw==}
-    dev: true
-
   /@types/scheduler/0.16.2:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
 
@@ -8055,6 +8049,13 @@ packages:
       pend: 1.2.0
     dev: false
 
+  /feed/4.2.2:
+    resolution: {integrity: sha512-u5/sxGfiMfZNtJ3OvQpXcvotFpYkL0n9u9mM2vkui2nGo8b4wvDkJ8gAkYqbA8QpGyFCv3RK0Z+Iv+9veCS9bQ==}
+    engines: {node: '>=0.4.0'}
+    dependencies:
+      xml-js: 1.6.11
+    dev: false
+
   /fetch-retry/5.0.3:
     resolution: {integrity: sha512-uJQyMrX5IJZkhoEUBQ3EjxkeiZkppBd5jS/fMTJmfZxLSiaQjv2zD0kTvuvkSH89uFvgSlB6ueGpjD3HWN7Bxw==}
     dev: false
@@ -11118,21 +11119,9 @@ packages:
       brorand: 1.1.0
     dev: false
 
-  /mime-db/1.25.0:
-    resolution: {integrity: sha512-5k547tI4Cy+Lddr/hdjNbBEWBwSl8EBc5aSdKvedav8DReADgWJzcYiktaRIw3GtGC1jjwldXtTzvqJZmtvC7w==}
-    engines: {node: '>= 0.6'}
-    dev: false
-
   /mime-db/1.52.0:
     resolution: {integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==}
     engines: {node: '>= 0.6'}
-    dev: false
-
-  /mime-types/2.1.13:
-    resolution: {integrity: sha512-ryBDp1Z/6X90UvjUK3RksH0IBPM137T7cmg4OgD5wQBojlAiUwuok0QeELkim/72EtcYuNlmbkrcGuxj3Kl0YQ==}
-    engines: {node: '>= 0.6'}
-    dependencies:
-      mime-db: 1.25.0
     dev: false
 
   /mime-types/2.1.35:
@@ -13036,13 +13025,6 @@ packages:
       inherits: 2.0.4
     dev: false
 
-  /rss/1.2.2:
-    resolution: {integrity: sha512-xUhRTgslHeCBeHAqaWSbOYTydN2f0tAzNXvzh3stjz7QDhQMzdgHf3pfgNIngeytQflrFPfy6axHilTETr6gDg==}
-    dependencies:
-      mime-types: 2.1.13
-      xml: 1.0.1
-    dev: false
-
   /rsvp/4.8.5:
     resolution: {integrity: sha512-nfMOlASu9OnRJo1mbEk2cz0D56a1MBNrJ7orjRZQG10XDyuvwksKbuXNp6qa+kbn839HwjwhBzhFmdsaEAfauA==}
     engines: {node: 6.* || >= 7.*}
@@ -13097,6 +13079,10 @@ packages:
       walker: 1.0.8
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /sax/1.2.4:
+    resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==}
     dev: false
 
   /scheduler/0.23.0:
@@ -14890,8 +14876,11 @@ packages:
       default-browser-id: 1.0.4
     dev: false
 
-  /xml/1.0.1:
-    resolution: {integrity: sha512-huCv9IH9Tcf95zuYCsQraZtWnJvBtLVE0QHMOs8bWyZAFZNDcYjsPq1nEx8jKA9y+Beo9v+7OBPRisQTjinQMw==}
+  /xml-js/1.6.11:
+    resolution: {integrity: sha512-7rVi2KMfwfWFl+GpPg6m80IVMWXLRjO+PxTq7V2CDhoGak0wzYzFgUY2m4XJ47OGdXd8eLE8EmwfAmdjw7lC1g==}
+    hasBin: true
+    dependencies:
+      sax: 1.2.4
     dev: false
 
   /xtend/4.0.2:

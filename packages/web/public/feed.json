@@ -1,0 +1,47 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "igara.github.io",
+    "home_page_url": "https://igara.github.io/",
+    "feed_url": "https://igara.github.io/feed.json",
+    "description": "RSS Feed",
+    "author": {
+        "name": "syo-igarashi"
+    },
+    "items": [
+        {
+            "id": "https://igara.github.io/blogs/zenn/Spreadsheet管理のライティングルールをtextlintで浸透させる VSCodeにも適応する",
+            "url": "https://igara.github.io/blogs/zenn/Spreadsheet管理のライティングルールをtextlintで浸透させる VSCodeにも適応する",
+            "title": "Spreadsheet管理のライティングルールをtextlintで浸透させる VSCodeにも適応する",
+            "summary": "文章を書く際、表記揺れをしないようルールを決めることがあると思います。  その際に共通の定義としてSpreadsheet管理することが多い気はしますが情報が定着せず知らずにレギュレ",
+            "date_modified": "2022-10-05T15:55:05.000Z"
+        },
+        {
+            "id": "https://igara.github.io/blogs/hatena/ダーツにハマった",
+            "url": "https://igara.github.io/blogs/hatena/ダーツにハマった",
+            "title": "ダーツにハマった",
+            "summary": "  Amazonのプライムデーで安かったので家でも投げられるようになった。www.dartslive.comDARTSLIVE Homeというの購入。操作感がまんま店のものと近くて",
+            "date_modified": "2022-07-16T15:00:00.000Z"
+        },
+        {
+            "id": "https://igara.github.io/blogs/zenn/ESLintのルール新規追加、Stylelintのルール追加しました 補足",
+            "url": "https://igara.github.io/blogs/zenn/ESLintのルール新規追加、Stylelintのルール追加しました 補足",
+            "title": "ESLintのルール新規追加、Stylelintのルール追加しました 補足",
+            "summary": "https://engineer.blog.lancers.jp/フロントエンド/フロントエンド定例-2022-6-17  の「ESLintのルール新規追加、Stylelintのル",
+            "date_modified": "2022-06-18T13:39:06.000Z"
+        },
+        {
+            "id": "https://igara.github.io/blogs/zenn/独自のStylelint拡張をかいた 補足 共通のカラーコード参照",
+            "url": "https://igara.github.io/blogs/zenn/独自のStylelint拡張をかいた 補足 共通のカラーコード参照",
+            "title": "独自のStylelint拡張をかいた 補足 共通のカラーコード参照",
+            "summary": "https://engineer.blog.lancers.jp/フロントエンド/フロントエンド定例-2022-6-3  の「独自のStylelint拡張をかいた」の記事に対しての",
+            "date_modified": "2022-06-05T08:39:33.000Z"
+        },
+        {
+            "id": "https://igara.github.io/blogs/zenn/モノリス分離したいのでモノレポ化にする考察",
+            "url": "https://igara.github.io/blogs/zenn/モノリス分離したいのでモノレポ化にする考察",
+            "title": "モノリス分離したいのでモノレポ化にする考察",
+            "summary": "最近の仕事で思うのがソースが一箇所に集中しつつありながらもちょっとマイクロサービス意識して別アプリケーションのディレクトリ切ってみて結果的にソースや設計思想も散らばってて辛いという",
+            "date_modified": "2022-03-24T09:08:30.000Z"
+        }
+    ]
+}
