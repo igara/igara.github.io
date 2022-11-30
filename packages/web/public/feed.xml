@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://igara.github.io/</id>
     <title>igara.github.io</title>
-    <updated>2022-10-15T17:51:03.767Z</updated>
+    <updated>2022-11-30T15:26:19.103Z</updated>
     <generator>awesome</generator>
     <author>
         <name>syo-igarashi</name>
@@ -13,6 +13,13 @@
     <subtitle>RSS Feed</subtitle>
     <icon>https://igara.github.io/favicon.ico</icon>
     <rights>All rights reserved 1991, syo-igarashi</rights>
+    <entry>
+        <title type="html"><![CDATA[後日談_Slackのチャンネルのメッセージを1つのチャンネルに集約するSlackボットを作ってみた]]></title>
+        <id>https://igara.github.io/blogs/hatena/後日談_Slackのチャンネルのメッセージを1つのチャンネルに集約するSlackボットを作ってみた</id>
+        <link href="https://igara.github.io/blogs/hatena/後日談_Slackのチャンネルのメッセージを1つのチャンネルに集約するSlackボットを作ってみた"/>
+        <updated>2022-11-29T15:00:00.000Z</updated>
+        <summary type="html"><![CDATA[  OGPサムネ用に画像を先に貼ります。作成物としては1年前のものですが無事1年運用できたので振り返りの記事になります。zenn.devまた所属している会社（ランサーズ株式会社）の]]></summary>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Spreadsheet管理のライティングルールをtextlintで浸透させる VSCodeにも適応する]]></title>
         <id>https://igara.github.io/blogs/zenn/Spreadsheet管理のライティングルールをtextlintで浸透させる VSCodeにも適応する</id>
@@ -40,12 +47,5 @@
         <link href="https://igara.github.io/blogs/zenn/独自のStylelint拡張をかいた 補足 共通のカラーコード参照"/>
         <updated>2022-06-05T08:39:33.000Z</updated>
         <summary type="html"><![CDATA[https://engineer.blog.lancers.jp/フロントエンド/フロントエンド定例-2022-6-3  の「独自のStylelint拡張をかいた」の記事に対しての]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[モノリス分離したいのでモノレポ化にする考察]]></title>
-        <id>https://igara.github.io/blogs/zenn/モノリス分離したいのでモノレポ化にする考察</id>
-        <link href="https://igara.github.io/blogs/zenn/モノリス分離したいのでモノレポ化にする考察"/>
-        <updated>2022-03-24T09:08:30.000Z</updated>
-        <summary type="html"><![CDATA[最近の仕事で思うのがソースが一箇所に集中しつつありながらもちょっとマイクロサービス意識して別アプリケーションのディレクトリ切ってみて結果的にソースや設計思想も散らばってて辛いという]]></summary>
     </entry>
 </feed>

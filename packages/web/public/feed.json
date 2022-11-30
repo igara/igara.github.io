@@ -9,6 +9,14 @@
     },
     "items": [
         {
+            "id": "https://igara.github.io/blogs/hatena/後日談_Slackのチャンネルのメッセージを1つのチャンネルに集約するSlackボットを作ってみた",
+            "url": "https://igara.github.io/blogs/hatena/後日談_Slackのチャンネルのメッセージを1つのチャンネルに集約するSlackボットを作ってみた",
+            "title": "後日談_Slackのチャンネルのメッセージを1つのチャンネルに集約するSlackボットを作ってみた",
+            "summary": "  OGPサムネ用に画像を先に貼ります。作成物としては1年前のものですが無事1年運用できたので振り返りの記事になります。zenn.devまた所属している会社（ランサーズ株式会社）の",
+            "image": "https://igara.github.io/ogp/1200x630/blogs/hatena/392fcd1e6cb7c01fe298afdd5dd37117015f54b275762c6ff10926c8b580eee9.png",
+            "date_modified": "2022-11-29T15:00:00.000Z"
+        },
+        {
             "id": "https://igara.github.io/blogs/zenn/Spreadsheet管理のライティングルールをtextlintで浸透させる VSCodeにも適応する",
             "url": "https://igara.github.io/blogs/zenn/Spreadsheet管理のライティングルールをtextlintで浸透させる VSCodeにも適応する",
             "title": "Spreadsheet管理のライティングルールをtextlintで浸透させる VSCodeにも適応する",
@@ -39,14 +47,6 @@
             "summary": "https://engineer.blog.lancers.jp/フロントエンド/フロントエンド定例-2022-6-3  の「独自のStylelint拡張をかいた」の記事に対しての",
             "image": "https://igara.github.io/ogp/1200x630/blogs/zenn/052da65e67af3127e1f0c0ab240657a78110479fecd63718380a72c820bdd4fb.png",
             "date_modified": "2022-06-05T08:39:33.000Z"
-        },
-        {
-            "id": "https://igara.github.io/blogs/zenn/モノリス分離したいのでモノレポ化にする考察",
-            "url": "https://igara.github.io/blogs/zenn/モノリス分離したいのでモノレポ化にする考察",
-            "title": "モノリス分離したいのでモノレポ化にする考察",
-            "summary": "最近の仕事で思うのがソースが一箇所に集中しつつありながらもちょっとマイクロサービス意識して別アプリケーションのディレクトリ切ってみて結果的にソースや設計思想も散らばってて辛いという",
-            "image": "https://igara.github.io/ogp/1200x630/blogs/zenn/61c8fd9403a25128b321ed9e144bcc8acbe347590ff26600cba76d4ecd2caa3a.png",
-            "date_modified": "2022-03-24T09:08:30.000Z"
         }
     ]
 }
