@@ -17,6 +17,14 @@
             "date_modified": "2023-02-02T16:13:41.000Z"
         },
         {
+            "id": "https://igara.github.io/blogs/hatena/雑コラを作る技術",
+            "url": "https://igara.github.io/blogs/hatena/雑コラを作る技術",
+            "title": "雑コラを作る技術",
+            "summary": "  スクリーンショット、キャプチャの取り方  - OS標準のスクリーンショットの取り方動画として保存するとき画像加工  - 背景透過・レイヤー分けSVG作成動画加工  - 動画フォ",
+            "image": "https://igara.github.io/ogp/1200x630/blogs/hatena/5002408996299bfc2e5ee4a9dcbbf8b57fb0d3f83993cf7592b408aedbea8e73.png",
+            "date_modified": "2022-12-03T15:00:00.000Z"
+        },
+        {
             "id": "https://igara.github.io/blogs/hatena/後日談_Slackのチャンネルのメッセージを1つのチャンネルに集約するSlackボットを作ってみた",
             "url": "https://igara.github.io/blogs/hatena/後日談_Slackのチャンネルのメッセージを1つのチャンネルに集約するSlackボットを作ってみた",
             "title": "後日談_Slackのチャンネルのメッセージを1つのチャンネルに集約するSlackボットを作ってみた",
@@ -39,14 +47,6 @@
             "summary": "  Amazonのプライムデーで安かったので家でも投げられるようになった。www.dartslive.comDARTSLIVE Homeというの購入。操作感がまんま店のものと近くて",
             "image": "https://igara.github.io/ogp/1200x630/blogs/hatena/11e94cc7b838f28b4b56fe836ee0034306178c20edd14029ddcb12e850134896.png",
             "date_modified": "2022-07-16T15:00:00.000Z"
-        },
-        {
-            "id": "https://igara.github.io/blogs/zenn/ESLintのルール新規追加、Stylelintのルール追加しました 補足",
-            "url": "https://igara.github.io/blogs/zenn/ESLintのルール新規追加、Stylelintのルール追加しました 補足",
-            "title": "ESLintのルール新規追加、Stylelintのルール追加しました 補足",
-            "summary": "https://engineer.blog.lancers.jp/フロントエンド/フロントエンド定例-2022-6-17  の「ESLintのルール新規追加、Stylelintのル",
-            "image": "https://igara.github.io/ogp/1200x630/blogs/zenn/6d54a82d9e2bd3438983c1fc6ad0678ca8a6445b7cb7520a996fa0b54e1fd93b.png",
-            "date_modified": "2022-06-18T13:39:06.000Z"
         }
     ]
 }

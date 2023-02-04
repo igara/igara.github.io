@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://igara.github.io/</id>
     <title>igara.github.io</title>
-    <updated>2023-02-04T03:06:56.509Z</updated>
+    <updated>2023-02-04T03:18:19.710Z</updated>
     <generator>awesome</generator>
     <author>
         <name>syo-igarashi</name>
@@ -19,6 +19,13 @@
         <link href="https://igara.github.io/blogs/zenn/reveal-mdとGitHub Pagesでスライドを公開する"/>
         <updated>2023-02-02T16:13:41.000Z</updated>
         <summary type="html"><![CDATA[--------今回この記事を書いたきっかけとして久しぶりにLT会参加し、その際の資料を事前共有・GitHub Pagesで管理できるものあったらいいなと思ったのでスライド作成ツー]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[雑コラを作る技術]]></title>
+        <id>https://igara.github.io/blogs/hatena/雑コラを作る技術</id>
+        <link href="https://igara.github.io/blogs/hatena/雑コラを作る技術"/>
+        <updated>2022-12-03T15:00:00.000Z</updated>
+        <summary type="html"><![CDATA[  スクリーンショット、キャプチャの取り方  - OS標準のスクリーンショットの取り方動画として保存するとき画像加工  - 背景透過・レイヤー分けSVG作成動画加工  - 動画フォ]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[後日談_Slackのチャンネルのメッセージを1つのチャンネルに集約するSlackボットを作ってみた]]></title>
@@ -40,12 +47,5 @@
         <link href="https://igara.github.io/blogs/hatena/ダーツにハマった"/>
         <updated>2022-07-16T15:00:00.000Z</updated>
         <summary type="html"><![CDATA[  Amazonのプライムデーで安かったので家でも投げられるようになった。www.dartslive.comDARTSLIVE Homeというの購入。操作感がまんま店のものと近くて]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ESLintのルール新規追加、Stylelintのルール追加しました 補足]]></title>
-        <id>https://igara.github.io/blogs/zenn/ESLintのルール新規追加、Stylelintのルール追加しました 補足</id>
-        <link href="https://igara.github.io/blogs/zenn/ESLintのルール新規追加、Stylelintのルール追加しました 補足"/>
-        <updated>2022-06-18T13:39:06.000Z</updated>
-        <summary type="html"><![CDATA[https://engineer.blog.lancers.jp/フロントエンド/フロントエンド定例-2022-6-17  の「ESLintのルール新規追加、Stylelintのル]]></summary>
     </entry>
 </feed>
