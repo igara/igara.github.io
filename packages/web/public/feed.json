@@ -9,6 +9,14 @@
     },
     "items": [
         {
+            "id": "https://igara.github.io/blogs/zenn/reveal-mdとGitHub Pagesでスライドを公開する",
+            "url": "https://igara.github.io/blogs/zenn/reveal-mdとGitHub Pagesでスライドを公開する",
+            "title": "reveal-mdとGitHub Pagesでスライドを公開する",
+            "summary": "--------今回この記事を書いたきっかけとして久しぶりにLT会参加し、その際の資料を事前共有・GitHub Pagesで管理できるものあったらいいなと思ったのでスライド作成ツー",
+            "image": "https://igara.github.io/ogp/1200x630/blogs/zenn/db7a7341ea7769a8d56caa5c7e889c7cc10a57bb8ecc25420e81bb535159d9c4.png",
+            "date_modified": "2023-02-02T16:13:41.000Z"
+        },
+        {
             "id": "https://igara.github.io/blogs/hatena/後日談_Slackのチャンネルのメッセージを1つのチャンネルに集約するSlackボットを作ってみた",
             "url": "https://igara.github.io/blogs/hatena/後日談_Slackのチャンネルのメッセージを1つのチャンネルに集約するSlackボットを作ってみた",
             "title": "後日談_Slackのチャンネルのメッセージを1つのチャンネルに集約するSlackボットを作ってみた",
@@ -39,14 +47,6 @@
             "summary": "https://engineer.blog.lancers.jp/フロントエンド/フロントエンド定例-2022-6-17  の「ESLintのルール新規追加、Stylelintのル",
             "image": "https://igara.github.io/ogp/1200x630/blogs/zenn/6d54a82d9e2bd3438983c1fc6ad0678ca8a6445b7cb7520a996fa0b54e1fd93b.png",
             "date_modified": "2022-06-18T13:39:06.000Z"
-        },
-        {
-            "id": "https://igara.github.io/blogs/zenn/独自のStylelint拡張をかいた 補足 共通のカラーコード参照",
-            "url": "https://igara.github.io/blogs/zenn/独自のStylelint拡張をかいた 補足 共通のカラーコード参照",
-            "title": "独自のStylelint拡張をかいた 補足 共通のカラーコード参照",
-            "summary": "https://engineer.blog.lancers.jp/フロントエンド/フロントエンド定例-2022-6-3  の「独自のStylelint拡張をかいた」の記事に対しての",
-            "image": "https://igara.github.io/ogp/1200x630/blogs/zenn/052da65e67af3127e1f0c0ab240657a78110479fecd63718380a72c820bdd4fb.png",
-            "date_modified": "2022-06-05T08:39:33.000Z"
         }
     ]
 }

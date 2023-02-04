@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://igara.github.io/</id>
     <title>igara.github.io</title>
-    <updated>2022-11-30T15:40:06.738Z</updated>
+    <updated>2023-02-04T02:36:12.105Z</updated>
     <generator>awesome</generator>
     <author>
         <name>syo-igarashi</name>
@@ -13,6 +13,13 @@
     <subtitle>RSS Feed</subtitle>
     <icon>https://igara.github.io/favicon.ico</icon>
     <rights>All rights reserved 1991, syo-igarashi</rights>
+    <entry>
+        <title type="html"><![CDATA[reveal-mdとGitHub Pagesでスライドを公開する]]></title>
+        <id>https://igara.github.io/blogs/zenn/reveal-mdとGitHub Pagesでスライドを公開する</id>
+        <link href="https://igara.github.io/blogs/zenn/reveal-mdとGitHub Pagesでスライドを公開する"/>
+        <updated>2023-02-02T16:13:41.000Z</updated>
+        <summary type="html"><![CDATA[--------今回この記事を書いたきっかけとして久しぶりにLT会参加し、その際の資料を事前共有・GitHub Pagesで管理できるものあったらいいなと思ったのでスライド作成ツー]]></summary>
+    </entry>
     <entry>
         <title type="html"><![CDATA[後日談_Slackのチャンネルのメッセージを1つのチャンネルに集約するSlackボットを作ってみた]]></title>
         <id>https://igara.github.io/blogs/hatena/後日談_Slackのチャンネルのメッセージを1つのチャンネルに集約するSlackボットを作ってみた</id>
@@ -40,12 +47,5 @@
         <link href="https://igara.github.io/blogs/zenn/ESLintのルール新規追加、Stylelintのルール追加しました 補足"/>
         <updated>2022-06-18T13:39:06.000Z</updated>
         <summary type="html"><![CDATA[https://engineer.blog.lancers.jp/フロントエンド/フロントエンド定例-2022-6-17  の「ESLintのルール新規追加、Stylelintのル]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[独自のStylelint拡張をかいた 補足 共通のカラーコード参照]]></title>
-        <id>https://igara.github.io/blogs/zenn/独自のStylelint拡張をかいた 補足 共通のカラーコード参照</id>
-        <link href="https://igara.github.io/blogs/zenn/独自のStylelint拡張をかいた 補足 共通のカラーコード参照"/>
-        <updated>2022-06-05T08:39:33.000Z</updated>
-        <summary type="html"><![CDATA[https://engineer.blog.lancers.jp/フロントエンド/フロントエンド定例-2022-6-3  の「独自のStylelint拡張をかいた」の記事に対しての]]></summary>
     </entry>
 </feed>
